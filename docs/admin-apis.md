@@ -48,9 +48,9 @@ This page is a work in progress. While it's being constructed, temporary API doc
 | [deleteSectorIdentifier](#deletesectoridentifier) | Delete a Sector Identifier |
 | [deleteUmaResource](#deleteumaresource) | Delete an UMA resource |
 | [deleteUmaScope](#deleteumascope) | Delete an UMA scope |
-| [getAllActivesAttributes](#getallactivesattributes) | Get all active attributes |
+| [getAllActiveAttributes](#getallactiveattributes) | Get all active attributes |
 | [getAllAttributes](#getallattributes) | Get all attributes |
-| [getAllInActivesAttributes](#getallinactivesattributes) | Get all inactive attributes |
+| [getAllInactiveAttributes](#getallinactiveattributes) | Get all inactive attributes |
 | [getAllScopes](#getallscopes) | Get all scopes |
 | [getAllSectorIdentifiers](#getallsectoridentifiers) | Get all sector identifiers |
 | [getAttributeByInum](#getattributebyinum) | Get a specific attribute |
@@ -795,7 +795,7 @@ This page is a work in progress. While it's being constructed, temporary API doc
 | --- | --- | --- |
 | | |
 
-### getAllActivesAttributes
+### getAllActiveAttributes
 
 **URL**
 
@@ -831,7 +831,7 @@ This page is a work in progress. While it's being constructed, temporary API doc
 | --- | --- | --- |
 | | |
 
-### getAllInActivesAttributes
+### getAllInactiveAttributes
 
 **URL**
 
