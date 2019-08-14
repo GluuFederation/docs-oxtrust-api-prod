@@ -1,0 +1,39 @@
+# Project information
+site_name: Gluu Server Admin API 4.0 Beta Docs
+site_description: Documentation for Gluu Server oxTrust Admin APIs
+
+# Copyright
+copyright: Copyright &copy; 2019, Gluu, Inc.
+
+# Repository
+docs_dir: source
+repo_name: GluuFederation/docs-ce-prod
+repo_url: https://github.com/GluuFederation/docs-oxtrust-api-prod/
+edit_uri: edit/4.0/docs/source
+
+# Configuration
+theme: 
+    name: material
+    palette:
+        primary: 'green'
+        accent: 'green'
+    logo: 'gluu.jpg'
+    favicon: 'favicon.ico'
+extra:
+    version: '4.0'
+    
+# Extensions
+markdown_extensions:
+- admonition
+- toc:
+     permalink: '#'
+- codehilite     
+- pymdownx.superfences
+
+# Navigation
+nav:
+- 'Versions':
+    - '4.0 Beta': 'https://gluu.org/docs/oxtrust-api/4.0/'
+- ' ': 'https://gluu.org/docs'
+- ' ': 'https://gluu.org/docs'
+- Home: 'admin-api.md'
