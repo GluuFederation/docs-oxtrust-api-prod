@@ -324,73 +324,320 @@ LdapConfigurationDTO
 
 **URL**
 
+```
+//api/v1/attributes
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuAttribute
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | | 
+| `type` | String | | 
+| `lifetime` | String | | 
+| `sourceAttribute` | String | 
+| `salt` | String |
+| `nameIdType` | String | 
+| `name` | String |
+| `displayName` | String |  
+| `description` | String |
+| `origin` | String | 
+| `dataType` | String | `string` |
+| | | `numeric` |
+| | | `boolean` |
+| | | `binary` |
+| | | `certificate` |
+| | | `generalizedTime` |
+| `editType` | List | |
+| `viewType` | List | |
+| `usageType` | List | |
+| `oxAuthClaimName` | String | | 
+| `seeAlso` | String | | 
+| `status` | String | `active` | |
+| | | `inactive` | |
+| | | `expired` | | 
+| | | `register` | |
+| `saml1Uri` | String | |
+| `saml2Uri` | String | |
+| `urn` | String | |
+| `oxSCIMCustomAttribute` | Boolean |  |
+| `oxMultivaluedAttribute` | Boolean | |
+| `custom` | Boolean | |
+| `requred` | Boolean | |
+| `attributeValidation` | AttributeValidation | | 
+| `gluuTooltip` | String | |
+| `adminCanAccess` | Boolean | |
+| `adminCanView` | Boolean | |
+| `adminCanEdit` | Boolean | |
+| `userCanAccess` | Boolean | |
+| `userCanView` | Boolean | |
+| `whitePagesCanView` | Boolean | |  
+| `userCanEdit` | Boolean | | 
+| `baseDn` : String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `GluuAttribute(GluuAttribute)` |
 
 ### createClient
 
 **URL**
 
+```
+//api/v1/clients
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+OxAuthClient
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | |
+| `iname` | String | |
+| `displayName` | String | | 
+| `description` | String  | |
+| `oxAuthAppType` | String | `web` |
+| | | `native` |
+| `contacts` | List | |
+| `oxAuthRedirectURIs` | List | | 
+| `oxAuthPostLogoutRedirectURIs` | List | |
+| `oxAuthScopes` | List | |
+| `oxAuthClaims` | List | |
+| `encodedClientSecret` | String | | 
+| `userPassword` | String | |
+| `associatedPersons` | List | |
+| `oxAuthTrustedClient` | Boolean | |
+| `responseTypes` | List | |
+| `grantTypes` | List | |
+| `logoUri` | String | |
+| `clientUri` | String | |
+| `policyUri` | String | |
+| `tosUri` | String | |
+| `jwksUri` | String | |
+| `jwks` | String | |
+| `sectorIdentifierUri` | String | | 
+| `subjectType` | String | `pairwise` |
+| | | `public` |
+| `idTokenTokenBindingCnf` | String | | 
+| `rptAsJwt` | Boolean | |
+| `accessTokenAsJwt` | Boolean | | 
+| `accessTokenSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenSignedResponseAlg` | String |`none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `idTokenEncryptedResponseEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `userInfoSignedResponseAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `userInfoEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `userInfoEncryptedResponseEnc` | String |`A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `requestObjectSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `requestObjectEncryptionAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `requestObjectEncryptionEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `tokenEndpointAuthMethod` | String | `client_secret_basic` |
+| | | `client_secret_post` |
+| | | `client_secret_jwt` |
+| | | `private_key_jwt` |
+| | | `none` |
+| `tokenEndpointAuthSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `defaultMaxAge` | Integer | | 
+| `requireAuthTime` | Boolean | |  
+| `postLogoutRedirectUris` | List | | 
+| `claimRedirectURI` | List | |
+| `logoutUri` | List | |
+| `logoutSessionRequired` | Boolean | |
+| `oxAuthPersistClientAuthorizations` | Boolean | | 
+| `oxIncludeClaimsInIdToken` | Boolean | |
+| `oxRefreshTokenLifetime` | Integer | |
+| `accessTokenLifetime` | Integer | |
+| `defaultAcrValues` | List | |
+| `initiateLoginUri` | String | |
+| `clientSecretExpiresAt` | Date | |
+| `requestUris` | List | |
+| `authorizedOrigins` | List | | 
+| `softwareId` | String | |
+| `softwareVersion` | String | | 
+| `softwareStatement` | String | |
+| `disabled` | Boolean | |
+| `oxdId` | String | |
+| `oxAuthClientSecret` | String | | 
+| `attributes` | ClientAttributes | |
+| `baseDn` | String | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `OxAuthClient(OxAuthClient)` |
 
 ### createCustomScript
 
 **URL**
 
+```
+//api/v1/configuration/scripts
+```
+
 **HTTP Method**
+
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+CustomScript
+
+| Field | Data Type | Options|
+|---    | --- | --- |
+| `dn` | String | |
+| `inum` | String | | 
+| `name` | String | | 
+| `aliases` | List | | 
+| `description` | String | | 
+| `script` | String | | 
+| `scriptType` | String | `person_authentication`
+| | | `introspection` |
+| | | `resource_owner_password_credentials` |
+| | | `application_session` |
+| | | `cache_refresh` |
+| | | `update_user` |
+| | | `user_registration` |
+| | | `client_registration` |
+| | | `id_generator` |
+| | | `uma_rpt_policy` |
+| | | `uma_claims_gathering` |
+| | | `consent_gathering` |
+| | | `dynamic_scope` |
+| | | `scim` |
+| `programmingLanguage` | String | `python` |
+| | | `javascript` |
+| `moduleProperties` | List | | 
+| `configurationProperties` | List | | 
+| `level` | Integer | |
+| `revision` | Long | | 
+| `enabled` | Boolean | | 
+| `scriptError` | ScriptError | | 
+| `modified` | Boolean | | 
+| `internal` | Boolean | | 
+| `locationType` | String | `ldap` |
+| | | `file` |
+| `locationPath` | String | | 
+| `baseDn` | String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `CustomScript(CustomScript)` |
 
 ### createGroup
 
 **URL**
 
+```
+//api/v1/groups
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuGroupApi
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String |  |
+| `iname` | String | | 
+| `displayName` | String | | 
+| `description`  | String | | 
+| `owner` | String | | 
+| `members` | List | | 
+| `organization` | String | | 
+| `status` | String | `active` |
+| | | `inactive` |
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `GluuGroupApi(GluuGroupApi)` |
 
 ### createPassportProvider
 
