@@ -133,109 +133,192 @@ This page is a work in progress. While it's being constructed, temporary API doc
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/clients/{inum}
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String |
+| `inum` | String |
+| `id` | String |
+| `name` | String |
+| `iconUri` | String |
+| `scopes` | List |
+| `scopeExpression` | String |
+| `clients` | List|
+| `resources` | List |
+| `rev` | String |
+| `creator` | String |
+| `description` | String |
+| `type` | String |
+| `creationDate` | Date |
+| `expirationDate` | Date |
+| `deletable` | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
+| Path | `inum` | String |
 
 ### addGroupMember
 
 **URL**
 
+```
+//api/v1/groups/{inum}/members/{minum}
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
+| Path | `minum` | String |
 
 ### addRadiusClient
 
 **URL**
 
+```
+//api/v1/radius/clients
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String |
+| `name` | String | 
+| `ipAddress` | String |
+| `secret` | String | 
+| `priority` | Integer |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `RadiusClient(RadiusClient)` |
 
 ### addScopeToClient
 
 **URL**
 
+```
+//api/v1/clients/{inum}/scopes/{sinum}
+``` 
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+string
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
+| Path | `sinum` | String |
 
 ### addScopeToUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/scopes/{inum}
+```
+
 **HTTP Method**
+
+`POST`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String |
+| `inum` | String |
+| `id` | String |
+| `name` | String |
+| `iconUri` | String |
+| `scopes` | List |
+| `scopeExpression` | String
+| `clients` | List|
+| `resources` | List |
+| `rev` | String |
+| `creator` | String |
+| `description` | String |
+| `type` | String |
+| `creationDate` | Date |
+| `expirationDate` | Date |
+| `deletable` | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
+| Path | `inum` | String |
 
 ### create
 
 **URL**
 
+```
+//api/v1/configuration/ldap
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
+LdapConfigurationDTO
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `configId` | String | 
+| `bindDN` | String |
+| `bindPassword` | String | 
+| `servers` | List |
+| `maxConnections` | Integer | 
+| `useSSL` | Boolean |
+| `baseDNs` | List |
+| `primaryKey` | String | 
+| `localPrimaryKey` | String | 
+| `useAnonymousBind` | Boolean | 
+| `enabled` | Boolean | 
+| `level` | Integer |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `LdapConfigurationDTO(LdapConfigurationDTO)` |
 
 ### createAttribute
 
