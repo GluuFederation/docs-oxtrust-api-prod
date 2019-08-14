@@ -7,7 +7,7 @@ copyright: Copyright &copy; 2019, Gluu, Inc.
 
 # Repository
 docs_dir: source
-repo_name: GluuFederation/docs-ce-prod
+repo_name: GluuFederation/docs-oxtrust-api-prod
 repo_url: https://github.com/GluuFederation/docs-oxtrust-api-prod/
 edit_uri: edit/4.0/docs/source
 
