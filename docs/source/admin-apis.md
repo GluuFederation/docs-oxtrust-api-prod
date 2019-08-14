@@ -643,217 +643,346 @@ GluuGroupApi
 
 **URL**
 
+```
+//api/v1/passport/providers
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
+Provider
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `id` | String | 
+| `displayName` | String | 
+| `type` | String |
+| `mapping` | String | 
+| `passportStrategyId` | String | 
+| `enabled` | Boolean | 
+| `callbackUrl` | String | 
+| `requestForEmail` | Boolean | 
+| `emailLinkingSafe` | Boolean | 
+| `passportAuthnParams` | String |
+| `options` | Map | 
+| `logo_img` | String |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `Provider(Provider)` |
 
 ### createPerson
 
 **URL**
 
+```
+//api/v1/users
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuPersonAPI
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String | | 
+| `iname` | String | |
+| `surName` String | |
+| `givenName` | String | | 
+| `email` | String | |
+| `password` | String | |
+| `userName` | String | |
+| `displayName` | String | |
+| `creationDate` | Date | |
+| `status` | String | `active` |
+| | | `inactive` | 
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `GluuPersonApi(GluuPersonApi)` |
 
 ### createScope
 
 **URL**
 
+```
+//api/v1/scopes
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+Scope
 
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | | 
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | |  
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | |
+ 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `Scope(Scope)` |
 
 ### createSectorIdentifier
 
 **URL**
 
+```
+//api/v1/sectoridentifiers
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
+OxAuthSectoryIdentifier
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `selected` | Boolean | 
+| `id` | String |
+| `description` | String | 
+| `redirectUris` | List | 
+| `clientIds` | List | 
+| `loginUri` | String |
+| `baseDn` | String |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
 
 ### createUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String |
+| `inum` | String |
+| `id` | String |
+| `name` | String |
+| `iconUri` | String |
+| `scopes` | List |
+| `scopeExpression` | String |
+| `clients` | List|
+| `resources` | List |
+| `rev` | String |
+| `creator` | String |
+| `description` | String |
+| `type` | String |
+| `creationDate` | Date |
+| `expirationDate` | Date |
+| `deletable` | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `UmaResource(UmaResource)` |
 
 ### createUmaScope
 
 **URL**
 
+```
+//api/v1/uma/scopes
+```
+
 **HTTP Method**
+`POST`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+Scope
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | | 
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | |  
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | body | `Scope(Scope)` |
 
 ### delete
 
 **URL**
 
+```
+//api/v1/configuration/ldap/{name}
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `name` | String |
 
 ### deleteAllProviders
 
 **URL**
 
+```
+//api/v1/passport/providers
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteAllUmaScopes
 
 **URL**
 
+```
+//api/v1/uma/scopes
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteAttribute
 
 **URL**
 
+```
+//api/v1/attributes/{inum}
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteAttributes
 
 **URL**
 
+```
+//api/v1/attributes
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteClient
 
 **URL**
 
+```
+//api/v1/clients/{inum}
+```
+
 **HTTP Method**
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteClientScopes
 
