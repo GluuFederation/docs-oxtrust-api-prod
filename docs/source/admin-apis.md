@@ -2318,595 +2318,891 @@ String
 
 **URL**
 
+```
+//api/v1/sectoridentifiers/{id}
+```
+
 **HTTP Method**
 
-**Response Type**
+`GET`
 
+**Response Type**
+ 
+OxAuthSectorIdentifier
+ 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `selected` | Boolean | 
+| `id` | String | 
+| `description` | String | 
+| `redirectUris` | List | 
+| `clientIds` | List | 
+| `loginUri` | String | 
+| `baseDn` | String | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String
 
 ### getServerConfig
 
 **URL**
 
+```
+//api/v1/radius/settings
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+ServerConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `listenInterface` | String | 
+| `authPort` | Integer | 
+| `acctPort` | Integer | 
+| `openidUsername` | String | 
+| `openidPassword` | String | 
+| `openidBaseUrl` | String | 
+| `acrValue` | String | 
+| `scopes` | List | 
+| `authenticationTimeout` | Integer | 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getServerStatus
 
 **URL**
 
+```
+//api/v1/configuration/status
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `hostname` | String | 
+| `ipAddress` | String | 
+| `uptime` | String | 
+| `lastUpdate` | Date | 
+| `pollingInterval` | String | 
+| `personCount` | String | 
+| `groupCount` | String | 
+| `freeMemory` | String | 
+| `freeDiskSpace` | String |  
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getSmtpServerConfiguration
 
 **URL**
 
+```
+//api/v1/configuration/smtp
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+SmtpConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `valid` | Boolean | 
+| `host` | String | 
+| `port` | Integer | 
+| `requires-ssl` | Boolean | 
+| `trust-host` | Boolean |
+| `from-name` | String | 
+| `from-email-address` | String |
+| `requires-authentication` | Boolean | 
+| `user-name` | String |
+| `password` | String | 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getUmaResourceById
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String |
+| `inum` | String |
+| `id` | String |
+| `name` | String |
+| `iconUri` | String |
+| `scopes` | List |
+| `scopeExpression` | String |
+| `clients` | List|
+| `resources` | List |
+| `rev` | String |
+| `creator` | String |
+| `description` | String |
+| `type` | String |
+| `creationDate` | Date |
+| `expirationDate` | Date |
+| `deletable` | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
 
 ### getUmaResourceClients
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/clients
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
 
 ### getUmaResourceScopes
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/scopes
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String
 
 ### getUmaScopeByInum
 
 **URL**
 
+```
+//api/v1/uma/scopes/{inum}
+```
+
 **HTTP Method**
 
-**Response Type**
+`GET`
 
-| Field | Data Type |
-|---    | --- |
-| | |
+**Response Type**
+ 
+ Scope
+ 
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | |
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | |
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### listCertificates
 
 **URL**
 
+```
+//api/v1/certificates
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listClients
 
 **URL**
 
+```
+//api/v1/clients
+```
+
 **HTTP Method**
+
+`GET` 
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listCustomScripts
 
 **URL**
 
+```
+//api/v1/configuration/scripts
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listCustomScriptsByType
 
 **URL**
 
+```
+//api/v1/configuration/scripts/type/{type}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `type` | String
 
 ### listGroups
 
 **URL**
 
+```
+//api/v1/groups
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `size` | Integer |
 
 ### listPeople
 
 **URL**
 
+```
+//api/v1/users
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listProviders
 
 **URL**
 
+```
+//api/v1/passport/providers
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listRadiusClients
 
 **URL**
 
+```
+//api/v1/radius/clients
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
-
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
 
 ### listUmaResources
 
 **URL**
 
+```
+//api/v1/uma/resources
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### listUmaScopes
 
 **URL**
 
+```
+//api/v1/uma/scopes
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### read
 
 **URL**
 
+```
+//api/v1/configuration/ldap
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### removeClientToUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/clients/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String | 
+| `id` | String | 
+| `name` | String | 
+| `iconUri` | String | 
+| `scopes` | List | 
+| `scopeExpression` | String | 
+| `clients` | List |  
+| `resources` | List | 
+| `rev` | String | 
+| `creator` | String | 
+| `description` | String | 
+| `type` | String | 
+| `creationDate` | Date | 
+| `expirationDate` | Date | 
+| `deletable` | Boolean | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
+| Path | `inum` | String |
 
 ### removeGroupMember
 
 **URL**
 
+```
+//api/v1/groups/{inum}/members/{minum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
+| Path | `minum` | String |
 
 ### removeScopeToClient
 
 **URL**
 
+```
+//api/v1/clients/{inum}/scopes/{sinum}
+```
+
 **HTTP Method**
+
+```
+DELETE
+```
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
+| Path | `sinum` | String |
 
 ### removeScopeToUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}/scopes/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String | 
+| `id` | String | 
+| `name` | String | 
+| `iconUri` | String | 
+| `scopes` | List | 
+| `scopeExpression` | String | 
+| `clients` | List |  
+| `resources` | List | 
+| `rev` | String | 
+| `creator` | String | 
+| `description` | String | 
+| `type` | String | 
+| `creationDate` | Date | 
+| `expirationDate` | Date | 
+| `deletable` | Boolean | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
+| Path | `inum` | String |
 
 ### searchAttributes
 
 **URL**
 
+```
+//api/v1/attributes/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+
+GluuAttribute
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | | 
+| `type` | String | | 
+| `lifetime` | String | | 
+| `sourceAttribute` | String | 
+| `salt` | String |
+| `nameIdType` | String | 
+| `name` | String |
+| `displayName` | String |  
+| `description` | String |
+| `origin` | String | 
+| `dataType` | String | `string` |
+| | | `numeric` |
+| | | `boolean` |
+| | | `binary` |
+| | | `certificate` |
+| | | `generalizedTime` |
+| `editType` | List | |
+| `viewType` | List | |
+| `usageType` | List | |
+| `oxAuthClaimName` | String | | 
+| `seeAlso` | String | | 
+| `status` | String | `active` | |
+| | | `inactive` | |
+| | | `expired` | | 
+| | | `register` | |
+| `saml1Uri` | String | |
+| `saml2Uri` | String | |
+| `urn` | String | |
+| `oxSCIMCustomAttribute` | Boolean |  |
+| `oxMultivaluedAttribute` | Boolean | |
+| `custom` | Boolean | |
+| `requred` | Boolean | |
+| `attributeValidation` | AttributeValidation | | 
+| `gluuTooltip` | String | |
+| `adminCanAccess` | Boolean | |
+| `adminCanView` | Boolean | |
+| `adminCanEdit` | Boolean | |
+| `userCanAccess` | Boolean | |
+| `userCanView` | Boolean | |
+| `whitePagesCanView` | Boolean | |  
+| `userCanEdit` | Boolean | | 
+| `baseDn` : String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchGroups
 
 **URL**
 
+```
+//api/v1/clients/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchGroups1
 
 **URL**
 
+```
+//api/v1/groups/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchGroups2
 
 **URL**
 
+```
+//api/v1/users/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
 
 ### searchScope
 
 **URL**
 
+```
+//api/v1/scopes/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchSectorIdentifier
 
 **URL**
 
+```
+//api/v1/sectoridentifiers/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchUmaResources
 
 **URL**
 
+```
+//api/v1/uma/resources/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
-
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
+| Query | `size` | Integer |
 
 ### searchUmaScopes
 
 **URL**
 
+```
+//api/v1/uma/scopes/search
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Query | `pattern` | String |
 
 ### status
 
 **URL**
 
+```
+//api/v1/configuration/ldap/status
+```
+
 **HTTP Method**
+
+`POST`
 
 **Response Type**
 
+ConnectionStatusDTO
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| up | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+|---    | --- |
+| Body | body | `LdapConnectionData(LdapConnectionData)` |
 
 ### status1
 
 **URL**
 
+```
+//api/v1/configuration/ldap/{name}/status
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+ConnectionStatusDTO
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| up | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+|---    | --- |
+| Path | `name` | String |
 
 ### testSmtpConfiguration
 
