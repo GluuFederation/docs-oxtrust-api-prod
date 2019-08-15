@@ -208,6 +208,8 @@ String
 
 **Response Type**
 
+RadiusClient
+
 | Field | Data Type |
 |---    | --- |
 | `dn` | String | 
@@ -1507,6 +1509,8 @@ GluuAttribute
 
 **Response Type**
 
+CasProtocolDTO
+
 | Field | Data Type |
 |---    | --- |
 | `casBaseURL` | String | 
@@ -1529,6 +1533,8 @@ None
 `GET`
 
 **Response Type**
+
+OxAuthClient
 
 | Field | Data Type | Options |
 |---    | --- | --- |
@@ -1909,163 +1915,404 @@ String
 
 **URL**
 
+```
+//api/v1/configuration/oxauth/settings
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+oxAuthJsonConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `issuer` | String | 
+| `baseEndpoint` | String |
+| `authorizationEndpoint` | String | 
+| `tokenEndpoint` | String |
+| `tokenRevocationEndpoint` | String | 
+| `userInfoEndpoint` | String |
+| `clientInfoEndpoint` | String | 
+| `checkSessionIFrame` | String |
+| `endSessionEndpoint` | String | 
+| `jwksUri` | String |
+| `registrationEndpoint` | String |
+| `openIdDiscoveryEndpoint` | String | 
+| `openIdConfigurationEndpoint` | String | 
+| `idGenerationEndpoint` | String | 
+| `introspectionEndpoint` | String |
+| `umaConfigurationEndpoint` | String | 
+| `sectorIdentifierEndpoint` | String |
+| `oxElevenGenerateKeyEndpoint` | String | 
+| `oxElevenSignEndpoint` | String |
+| `oxElevenVerifySignatureEndpoint` | String | 
+| `oxElevenDeleteKeyEndpoint` | String | 
+| `oxElevenJwksEndpoint` | String | 
+| `openidSubAttribute` | String |
+| `responseTypesSupported` | List | 
+| `grantTypesSupported` | List |
+| `subjectTypesSupported` | List | 
+| `defaultSubjectType` | String |
+| `userInfoSigningAlgValuesSupported` | List | 
+| `userInfoEncryptionAlgValuesSupported` | List |
+| `userInfoEncryptionEncValuesSupported` | List | 
+| `idTokenSigningAlgValuesSupported` | List |
+| `idTokenEncryptionAlgValuesSupported` | List |
+| `idTokenEncryptionEncValuesSupported` | List |
+| `requestObjectSigningAlgValuesSupported` | List | 
+| `requestObjectEncryptionAlgValuesSupported` | List |
+| `requestObjectEncryptionEncValuesSupported` | List | 
+| `tokenEndpointAuthMethodsSupported` | List |
+| `tokenEndpointAuthSigningAlgValuesSupported` | List |
+| `dynamicRegistrationCustomAttributes` | List |
+| `displayValuesSupported` | List | 
+| `claimTypesSupported` | List |
+| `serviceDocumentation` | String |
+| `claimsLocalesSupported` | List |
+| `idTokenTokenBindingCnfValuesSupported` | List | 
+| `uiLocalesSupported` | List |
+| `dynamicGrantTypeDefault` | List |
+| `claimsParameterSupported` | Boolean |
+| `requestParameterSupported` | Boolean |
+| `requestUriParameterSupported` | Boolean | 
+| `requireRequestUriRegistration` | Boolean |
+| `allowPostLogoutRedirectWithoutValidation` | Boolean |
+| `introspectionAccessTokenMustHaveUmaProtectionScope` | Boolean | 
+| `opPolicyUri` | String | 
+| `opTosUri` | String |
+| `authorizationCodeLifetime` | Integer | 
+| `refreshTokenLifetime` | Integer | 
+| `idTokenLifetime` | Integer |
+| `accessTokenLifetime` | Integer | 
+| `umaResourceLifetime` | Integer | 
+| `sessionAsJwt` | Boolean | 
+| `umaRptLifetime` | Integer |
+| `umaTicketLifetime` | Integer | 
+| `umaPctLifetime` | Integer |
+| `umaAddScopesAutomatically` | Boolean | 
+| `umaValidateClaimToken` | Boolean | 
+| `umaGrantAccessIfNoPolicies` | Boolean |
+| `umaRestrictResourceToAssociatedClient` | Boolean |
+| `umaKeepClientDuringResourceSetRegistration` | Boolean | 
+| `umaRptAsJwt` | Boolean |
+| `cleanServiceInterval` | Integer |
+| `keyRegenerationEnabled` | Boolean | 
+| `keyRegenerationInterval` | Integer |
+| `defaultSignatureAlgorithm` | String | 
+| `oxOpenIdConnectVersion` | String | 
+| `organizationInum` | String | 
+| `oxId` | String |
+| `dynamicRegistrationEnabled` | Boolean | 
+| `dynamicRegistrationExpirationTime` | Integer |
+| `dynamicRegistrationPersistClientAuthorizations` | Boolean | 
+| `trustedClientEnabled` | Boolean |
+| `skipAuthorizationForOpenIdScopeAndPairwiseId` | Boolean | 
+| `dynamicRegistrationScopesParamEnabled` | Boolean |
+| `dynamicRegistrationCustomObjectClass` | String | 
+| `personCustomObjectClassList` | List | 
+| `persistIdTokenInLdap` | Boolean |
+| `persistRefreshTokenInLdap` | Boolean | 
+| `authenticationFiltersEnabled` | Boolean |
+| `invalidateSessionCookiesAfterAuthorizationFlow` | Boolean | 
+| `clientAuthenticationFiltersEnabled` | Boolean | 
+| `authenticationFilters` | List |
+| `clientAuthenticationFilters` | List | 
+| `configurationInum` | String | 
+| `sessionIdUnusedLifetime` | Integer |
+| `sessionIdUnauthenticatedUnusedLifetime` | Integer | 
+| `sessionIdEnabled` | Boolean |
+| `sessionIdPersistOnPromptNone` | Boolean | 
+| `sessionIdLifetime` | Integer |
+| `configurationUpdateInterval` | Integer | 
+| `cssLocation` | String | 
+| `jsLocation` | String |
+| `imgLocation` | String | 
+| `metricReporterInterval` |  Integer |
+| `metricReporterKeepDataDays` | Integer | 
+| `pairwiseIdType` | String |
+| `pairwiseCalculationKey` | String | 
+| `pairwiseCalculationSalt` | String |
+| `shareSubjectIdBetweenClientsWithSameSectorId` | Boolean | 
+| `webKeysStorage` | String | 
+| `dnName` | String |
+| `keyStoreFile` | String | 
+| `keyStoreSecret` | String |
+| `endSessionWithAccessToken` | Boolean | 
+| `clientWhiteList` | List | 
+| `clientBlackList` | List | 
+| `legacyIdTokenClaims` | Boolean |
+| `customHeadersWithAuthorizationResponse` | Boolean |
+| `frontChannelLogoutSessionSupported` | Boolean | 
+| `updateUserLastLogonTime` | Boolean | 
+| `updateClientAccessTime` | Boolean |
+| `enableClientGrantTypeUpdate` | Boolean | 
+| `corsConfigurationFilters` | List |
+| `logClientIdOnClientAuthentication` | Boolean  |
+| `logClientNameOnClientAuthentication` | Boolean | 
+| `httpLoggingEnabled` | Boolean | 
+| `httpLoggingExludePaths` | List |
+| `externalLoggerConfiguration` | String |
+| `authorizationRequestCustomAllowedParameters` | List | 
+| `legacyDynamicRegistrationScopeParam` | Boolean |
+| `openidScopeBackwardCompatibility` | Boolean |
+| `useCacheForAllImplicitFlowObjects` | Boolean | 
+| `disableU2fEndpoint` | Boolean | 
+| `authenticationProtectionConfiguration` | `AuthenticationProtectionConfiguration` | 
+| `fido2Configuration` | Fido2Configuration | 
+| `loggingLevel` | String | 
+| `errorHandlingMethod` | String | 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getOxtrustJsonSettings
 
 **URL**
 
+```
+//api/v1/configuration/oxtrust/settings
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+OxTrustJsonSetting
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `orgName` | String | 
+| `supportEmail` | String | 
+| `scimTestMode` | Boolean |
+| `authenticationRecaptchaEnabled` | Boolean | 
+| `enforceEmailUniqueness` | Boolean |
+| `loggingLevel` | String |
+| `passwordResetRequestExpirationTime` | Integer |
+| `cleanServiceInterval` | Integer |
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getOxtrustSettings
 
 **URL**
 
+```
+//api/v1/configuration/settings
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+OxtrustSetting
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `allowPasswordReset` | String | 
+| `enablePassport `| String | 
+| `enableScim` | String |
+| `allowProfileManagement` | String |
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getPassportBasicConfig
 
 **URL**
 
+```
+//api/v1/passport/config
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getPersonByInum
 
 **URL**
 
+```
+//api/v1/users/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuPersonAPI
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String | | 
+| `iname` | String | |
+| `surName` String | |
+| `givenName` | String | | 
+| `email` | String | |
+| `password` | String | |
+| `userName` | String | |
+| `displayName` | String | |
+| `creationDate` | Date | |
+| `status` | String | `active` |
+| | | `inactive` | 
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getProviderById
 
 **URL**
 
+```
+//api/v1/passport/providers/{id}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `id` | String |
+| `displayName` | String | 
+| `type` | String |
+| `mapping` | String |
+| `passportStrategyId` | String | 
+| `enabled` | Boolean |
+| `callbackUrl` | String |
+| `requestForEmail` | Boolean |
+| `emailLinkingSafe` | Boolean |
+| `passportAuthnParams` | String | 
+| `options` | Map |
+| `logo_img` | String | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
 
 ### getRadiusClient
 
 **URL**
 
+```
+//api/v1/radius/clients/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+RadiusClient
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String |
+| `name` | String | 
+| `ipAddress` | String |
+| `secret` | String | 
+| `priority` | Integer |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getScopeByInum
 
 **URL**
 
+```
+//api/v1/scopes/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+Scope
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | | 
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | |  
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getScopeClaims
 
 **URL**
 
+```
+//api/v1/scopes/{inum}/claims
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String
 
 ### getSectorIdentifierById
 
