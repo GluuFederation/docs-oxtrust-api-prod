@@ -138,6 +138,7 @@ This page is a work in progress. While it's being constructed, temporary API doc
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -179,6 +180,7 @@ UmaResource
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -201,6 +203,7 @@ String
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -229,6 +232,7 @@ String
 ``` 
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -293,6 +297,7 @@ UmaResource
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -329,6 +334,7 @@ LdapConfigurationDTO
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -397,6 +403,7 @@ GluuAttribute
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -613,6 +620,7 @@ CustomScript
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -648,6 +656,7 @@ GluuGroupApi
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -684,6 +693,7 @@ Provider
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -721,6 +731,7 @@ GluuPersonAPI
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -761,6 +772,7 @@ Scope
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -793,6 +805,7 @@ OxAuthSectoryIdentifier
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -833,6 +846,7 @@ UmaResource
 ```
 
 **HTTP Method**
+
 `POST`
 
 **Response Type**
@@ -873,6 +887,7 @@ Scope
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -894,6 +909,7 @@ String
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -913,6 +929,7 @@ None
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -932,6 +949,7 @@ None
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -953,6 +971,7 @@ None
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -972,6 +991,7 @@ None
 ```
 
 **HTTP Method**
+
 `DELETE`
 
 **Response Type**
@@ -988,397 +1008,513 @@ String
 
 **URL**
 
+```
+//api/v1/clients/{inum}/scopes
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteClients
 
 **URL**
 
+```
+//api/v1/clients
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteCustomScript
 
 **URL**
 
+```
+//api/v1/configuration/scripts/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteGroup
 
 **URL**
 
+```
+//api/v1/groups/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteGroupMembers
 
 **URL**
 
+```
+//api/v1/groups/{inum}/members
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteGroups
 
 **URL**
 
+```
+//api/v1/groups
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deletePeople
 
 **URL**
 
+```
+//api/v1/users
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deletePerson
 
 **URL**
 
+```
+//api/v1/users/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteProvider
 
 **URL**
 
+```
+//api/v1/passport/providers/{id}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
 
 ### deleteRadiusClient
 
 **URL**
 
+```
+//api/v1/radius/clients/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteScope
 
 **URL**
 
+```
+//api/v1/scopes/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteScopes
 
 **URL**
 
+```
+//api/v1/scopes
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### deleteSectorIdentifier
 
 **URL**
 
+```
+//api/v1/sectoridentifiers/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### deleteUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources/{id}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `id` | String |
 
 ### deleteUmaScope
 
 **URL**
 
+```
+//api/v1/uma/scopes/{inum}
+```
+
 **HTTP Method**
+
+`DELETE`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+None
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String
 
 ### getAllActiveAttributes
 
 **URL**
 
+```
+//api/v1/attributes/active
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getAllAttributes
 
 **URL**
 
+```
+//api/v1/attributes
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getAllInactiveAttributes
 
 **URL**
 
+```
+//api/v1/attributes/inactive
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getAllScopes
 
 **URL**
 
+```
+//api/v1/scopes
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getAllSectorIdentifiers
 
 **URL**
 
+```
+//api/v1/sectoridentifiers
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getAttributeByInum
 
 **URL**
 
+```
+//api/v1/attributes/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuAttribute
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | | 
+| `type` | String | | 
+| `lifetime` | String | | 
+| `sourceAttribute` | String | 
+| `salt` | String |
+| `nameIdType` | String | 
+| `name` | String |
+| `displayName` | String |  
+| `description` | String |
+| `origin` | String | 
+| `dataType` | String | `string` |
+| | | `numeric` |
+| | | `boolean` |
+| | | `binary` |
+| | | `certificate` |
+| | | `generalizedTime` |
+| `editType` | List | |
+| `viewType` | List | |
+| `usageType` | List | |
+| `oxAuthClaimName` | String | | 
+| `seeAlso` | String | | 
+| `status` | String | `active` | |
+| | | `inactive` | |
+| | | `expired` | | 
+| | | `register` | |
+| `saml1Uri` | String | |
+| `saml2Uri` | String | |
+| `urn` | String | |
+| `oxSCIMCustomAttribute` | Boolean |  |
+| `oxMultivaluedAttribute` | Boolean | |
+| `custom` | Boolean | |
+| `requred` | Boolean | |
+| `attributeValidation` | AttributeValidation | | 
+| `gluuTooltip` | String | |
+| `adminCanAccess` | Boolean | |
+| `adminCanView` | Boolean | |
+| `adminCanEdit` | Boolean | |
+| `userCanAccess` | Boolean | |
+| `userCanView` | Boolean | |
+| `whitePagesCanView` | Boolean | |  
+| `userCanEdit` | Boolean | | 
+| `baseDn` : String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path  | `inum` | String |
 
 ### getCasConfig
 
 **URL**
 
+```
+//api/v1/configuration/cas
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `casBaseURL` | String | 
+| `shibbolethCASProtocolConfiguration` | `ShibbolethCASProtocolConfigurationDTO` |
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getClientByInum
 
