@@ -1520,127 +1520,390 @@ None
 
 **URL**
 
+```
+//api/v1/clients/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | |
+| `iname` | String | |
+| `displayName` | String | | 
+| `description` | String | |
+| `oxAuthAppType` | String | `web` |
+| | | `native` |
+| `contacts` | List | |
+| `oxAuthRedirectURIs` | List | | 
+| `oxAuthPostLogoutRedirectURIs` | List | | 
+| `oxAuthScopes` | List | |
+| `oxAuthClaims` | List | |
+| `encodedClientSecret` | String | | 
+| `userPassword` | String | |
+| `associatedPersons` | List | |
+| `oxAuthTrustedClient` | Boolean | | 
+| `responseTypes` | List | |
+| `grantTypes` | List | | 
+| `logoUri` | String | |
+| `clientUri` | String | |
+| `policyUri` | String | |
+| `tosUri` | String | |
+| `jwksUri` | String | |
+| `jwks` | String | |
+| `sectorIdentifierUri` | String | | 
+| `subjectType` | String | `pairwise` |
+| | | `public` |
+| `idTokenTokenBindingCnf` | String | | 
+| `rptAsJwt` | Boolean | |
+| `accessTokenAsJwt` | Boolean | | 
+| `accessTokenSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenSignedResponseAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `idTokenEncryptedResponseEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `userInfoSignedResponseAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `userInfoEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `userInfoEncryptedResponseEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `requestObjectSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `requestObjectEncryptionAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `requestObjectEncryptionEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `tokenEndpointAuthMethod` | String | `client_secret_basic` |
+| | | `client_secret_post` |
+| | | `client_secret_jwt` |
+| | | `private_key_jwt` |
+| | | `none` |
+| `tokenEndpointAuthSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `defaultMaxAge` | Integer | | 
+| `requireAuthTime` | Boolean | |
+| `postLogoutRedirectUris` | List | |  
+| `claimRedirectURI` | List | | 
+| `logoutUri` | List | |
+| `logoutSessionRequired` | Boolean | |  
+| `oxAuthPersistClientAuthorizations` | Boolean | | 
+| `oxIncludeClaimsInIdToken` | Boolean | |
+| `oxRefreshTokenLifetime` | Integer | | 
+| `accessTokenLifetime` | Integer | | 
+| `defaultAcrValues` | List | | 
+| `initiateLoginUri` | String | | 
+| `clientSecretExpiresAt` | Date | |
+| `requestUris` | List | |
+| `authorizedOrigins` | List | | 
+| `softwareId` | String | |
+| `softwareVersion` | String | | 
+| `softwareStatement` | String | |
+| `disabled` | Boolean | |
+| `oxdId` | String | |
+| `oxAuthClientSecret` | String | | 
+| `attributes` | ClientAttributes | |
+| `baseDn` | String | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getClientScope
 
 **URL**
 
+```
+//api/v1/clients/{inum}/scopes
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getConfiguration
 
 **URL**
 
+```
+//api/v1/configuration
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuConfiguration
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | |
+| `description` | String | | 
+| `displayName` | String | | 
+| `freeDiskSpace` | String | |
+| `freeMemory` | String | |
+| `freeSwap` | String | |
+| `groupCount` | String | |
+| `personCount` | String | |
+| `hostname` | String | |
+| `ipAddress` | String | |
+| `systemUptime` | String | |
+| `lastUpdate` | Date | |
+| `pollingInterval` | String | | 
+| `status` | String | `active` |
+| | | `inactive` |
+| | | `expired` |
+| | | `register` |
+| `userPassword` | String | | 
+| `gluuHttpStatus` | String | |
+| `gluuDSStatus` | String | |
+| `gluuVDSStatus` | String | |
+| `gluuSPTR` | String | |
+| `sslExpiry` | String | |
+| `profileManagment` | Boolean | | 
+| `manageIdentityPermission` | Boolean | | 
+| `vdsCacheRefreshEnabled` | Boolean | |
+| `cacheRefreshServerIpAddress` | String | | 
+| `vdsCacheRefreshPollingInterval` | String | | 
+| `vdsCacheRefreshLastUpdate` | Date | |
+| `vdsCacheRefreshLastUpdateCount` | String | | 
+| `vdsCacheRefreshProblemCount` | String | |
+| `scimEnabled` | Boolean | |
+| `passportEnabled` | Boolean | | 
+| `contactEmail` | String | |
+| `smtpConfiguration` | SmtpConfiguration | |
+| `configurationDnsServer` | String | |
+| `maxLogSize` | Integer | |
+| `loadAvg` | String | |
+| `oxIDPAuthentication` | List | | 
+| `authenticationMode` | String | |
+| `oxTrustAuthenticationMode` | String | | 
+| `oxLogViewerConfig` | LogViewerConfig | |
+| `oxLogConfigLocation` | String | |
+| `passwordResetAllowed` | Boolean | |
+| `trustStoreConfiguration` | TrustStoreConfiguration | | 
+| `trustStoreCertificates` | List | |
+| `cacheConfiguration` | CacheConfiguration | | 
+| `baseDn` | String | | 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getCurrentAuthentication
 
 **URL**
 
+```
+//api/v1/acrs
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `defaultAcr` | String | 
+| `oxtrustAcr` | String |
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### getCustomScriptsByInum
 
 **URL**
 
+//api/v1/configuration/scripts/{inum}
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+CustomScript
+
+| Field | Data Type | Options|
+|---    | --- | --- |
+| `dn` | String | |
+| `inum` | String | | 
+| `name` | String | | 
+| `aliases` | List | | 
+| `description` | String | | 
+| `script` | String | | 
+| `scriptType` | String | `person_authentication`
+| | | `introspection` |
+| | | `resource_owner_password_credentials` |
+| | | `application_session` |
+| | | `cache_refresh` |
+| | | `update_user` |
+| | | `user_registration` |
+| | | `client_registration` |
+| | | `id_generator` |
+| | | `uma_rpt_policy` |
+| | | `uma_claims_gathering` |
+| | | `consent_gathering` |
+| | | `dynamic_scope` |
+| | | `scim` |
+| `programmingLanguage` | String | `python` |
+| | | `javascript` |
+| `moduleProperties` | List | | 
+| `configurationProperties` | List | | 
+| `level` | Integer | |
+| `revision` | Long | | 
+| `enabled` | Boolean | | 
+| `scriptError` | ScriptError | | 
+| `modified` | Boolean | | 
+| `internal` | Boolean | | 
+| `locationType` | String | `ldap` |
+| | | `file` |
+| `locationPath` | String | | 
+| `baseDn` | String | | 
+
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getGroupByInum
 
 **URL**
 
+```
+//api/v1/groups/{inum}
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuGroupApi
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String |  |
+| `iname` | String | | 
+| `displayName` | String | | 
+| `description`  | String | | 
+| `owner` | String | | 
+| `members` | List | | 
+| `organization` | String | | 
+| `status` | String | `active` |
+| | | `inactive` |
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getGroupMembers
 
 **URL**
 
+```
+//api/v1/groups/{inum}/members
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Path | `inum` | String |
 
 ### getOxAuthJsonSettings
 
