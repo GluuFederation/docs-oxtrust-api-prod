@@ -239,7 +239,7 @@ RadiusClient
 
 **Response Type**
 
-string
+String
 
 **Parameters**
 
@@ -1324,7 +1324,7 @@ None
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Path | `inum` | String
+| Path | `inum` | String |
 
 ### getAllActiveAttributes
 
@@ -2312,7 +2312,7 @@ String
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Path | `inum` | String
+| Path | `inum` | String |
 
 ### getSectorIdentifierById
 
@@ -2345,7 +2345,7 @@ OxAuthSectorIdentifier
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Path | `id` | String
+| Path | `id` | String |
 
 ### getServerConfig
 
@@ -2526,7 +2526,7 @@ None
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Path | `id` | String
+| Path | `id` | String |
 
 ### getUmaScopeByInum
 
@@ -2649,7 +2649,7 @@ String
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Path | `type` | String
+| Path | `type` | String |
 
 ### listGroups
 
