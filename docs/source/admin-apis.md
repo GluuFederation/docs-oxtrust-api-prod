@@ -223,7 +223,7 @@ RadiusClient
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `RadiusClient(RadiusClient)` |
+| Body | | `RadiusClient(RadiusClient)` |
 
 ### addScopeToClient
 
@@ -325,7 +325,7 @@ LdapConfigurationDTO
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `LdapConfigurationDTO(LdapConfigurationDTO)` |
+| Body | | `LdapConfigurationDTO(LdapConfigurationDTO)` |
 
 ### createAttribute
 
@@ -394,7 +394,7 @@ GluuAttribute
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `GluuAttribute(GluuAttribute)` |
+| Body | | `GluuAttribute(GluuAttribute)` |
 
 ### createClient
 
@@ -552,7 +552,7 @@ OxAuthClient
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `OxAuthClient(OxAuthClient)` |
+| Body |  | `OxAuthClient(OxAuthClient)` |
 
 ### createCustomScript
 
@@ -611,7 +611,7 @@ CustomScript
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `CustomScript(CustomScript)` |
+| Body | | `CustomScript(CustomScript)` |
 
 ### createGroup
 
@@ -647,7 +647,7 @@ GluuGroupApi
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `GluuGroupApi(GluuGroupApi)` |
+| Body |  | `GluuGroupApi(GluuGroupApi)` |
 
 ### createPassportProvider
 
@@ -684,7 +684,7 @@ Provider
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `Provider(Provider)` |
+| Body |  | `Provider(Provider)` |
 
 ### createPerson
 
@@ -722,7 +722,7 @@ GluuPersonAPI
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `GluuPersonApi(GluuPersonApi)` |
+| Body | | `GluuPersonApi(GluuPersonApi)` |
 
 ### createScope
 
@@ -763,7 +763,7 @@ Scope
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `Scope(Scope)` |
+| Body |  | `Scope(Scope)` |
 
 ### createSectorIdentifier
 
@@ -796,7 +796,7 @@ OxAuthSectoryIdentifier
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
+| Body |  | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
 
 ### createUmaResource
 
@@ -837,7 +837,7 @@ UmaResource
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `UmaResource(UmaResource)` |
+| Body |  | `UmaResource(UmaResource)` |
 
 ### createUmaScope
 
@@ -878,7 +878,7 @@ Scope
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| Body | body | `Scope(Scope)` |
+| Body |  | `Scope(Scope)` |
 
 ### delete
 
@@ -3176,7 +3176,7 @@ ConnectionStatusDTO
 
 | Location | Parameter Name | Input |
 |---    | --- |
-| Body | body | `LdapConnectionData(LdapConnectionData)` |
+| Body |  | `LdapConnectionData(LdapConnectionData)` |
 
 ### status1
 
@@ -3208,376 +3208,1017 @@ ConnectionStatusDTO
 
 **URL**
 
+```
+//api/v1/configuration/smtp/test
+```
+
 **HTTP Method**
+
+`GET`
 
 **Response Type**
 
+SmtpConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `valid` | Boolean | 
+| `host` | String | 
+| `port` | Integer | 
+| `requires-ssl` | Boolean | 
+| `trust-host` | Boolean |
+| `from-name` | String | 
+| `from-email-address` | String |
+| `requires-authentication` | Boolean | 
+| `user-name` | String |
+| `password` | String | 
 
 **Parameters**
 
-| Location | Parameter Name | Input |
-| --- | --- | --- |
-| | |
+None
 
 ### update
 
 **URL**
 
+```
+//api/v1/configuration/cas
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+CasProtocolDTO
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `casBaseURL` | String | 
+| `shibbolethCASProtocolConfiguration` | `ShibbolethCASProtocolConfigurationDTO` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body |  | `CasProtocolDTO(CasProtocolDTO)` |
 
 ### update1
 
 **URL**
 
+```
+//api/v1/configuration/ldap
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+LdapConfigurationDTO
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `configId` | String | 
+| `bindDN`  | String | 
+| `bindPassword` | String | 
+| `servers` | List | 
+| `maxConnections` | Integer |
+| `useSSL` | Boolean | 
+| `baseDNs` | List | 
+| `primaryKey` | String  |
+| `localPrimaryKey` | String | 
+| `useAnonymousBind` | Boolean | 
+| `enabled`  | Boolean  |
+| `level` | Integer | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `LdapConfigurationDTO(LdapConfiguraitonDTO)` |
 
 ### updateAttribute
 
 **URL**
 
+```
+//api/v1/attributes
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuAttribute
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | | 
+| `type` | String | | 
+| `lifetime` | String | | 
+| `sourceAttribute` | String | 
+| `salt` | String |
+| `nameIdType` | String | 
+| `name` | String |
+| `displayName` | String |  
+| `description` | String |
+| `origin` | String | 
+| `dataType` | String | `string` |
+| | | `numeric` |
+| | | `boolean` |
+| | | `binary` |
+| | | `certificate` |
+| | | `generalizedTime` |
+| `editType` | List | |
+| `viewType` | List | |
+| `usageType` | List | |
+| `oxAuthClaimName` | String | | 
+| `seeAlso` | String | | 
+| `status` | String | `active` | |
+| | | `inactive` | |
+| | | `expired` | | 
+| | | `register` | |
+| `saml1Uri` | String | |
+| `saml2Uri` | String | |
+| `urn` | String | |
+| `oxSCIMCustomAttribute` | Boolean |  |
+| `oxMultivaluedAttribute` | Boolean | |
+| `custom` | Boolean | |
+| `requred` | Boolean | |
+| `attributeValidation` | AttributeValidation | | 
+| `gluuTooltip` | String | |
+| `adminCanAccess` | Boolean | |
+| `adminCanView` | Boolean | |
+| `adminCanEdit` | Boolean | |
+| `userCanAccess` | Boolean | |
+| `userCanView` | Boolean | |
+| `whitePagesCanView` | Boolean | |  
+| `userCanEdit` | Boolean | | 
+| `baseDn` : String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `GluuAttribute(GluuAttribute)` |
 
 ### updateAuthenticationMethod
 
 **URL**
 
+```
+//api/v1/acrs
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
 | Field | Data Type |
 |---    | --- |
-| | |
+| `defaultAcr` | String | 
+| `oxtrustAcr` | String | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `AuthenticationMethod(AuthenticationMethod)` |
 
 ### updateClient
 
 **URL**
 
+```
+//api/v1/clients
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+OxAuthClient
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | |
+| `selected` | Boolean | | 
+| `inum` | String | |
+| `iname` | String | |
+| `displayName` | String | | 
+| `description` | String  | |
+| `oxAuthAppType` | String | `web` |
+| | | `native` |
+| `contacts` | List | |
+| `oxAuthRedirectURIs` | List | | 
+| `oxAuthPostLogoutRedirectURIs` | List | |
+| `oxAuthScopes` | List | |
+| `oxAuthClaims` | List | |
+| `encodedClientSecret` | String | | 
+| `userPassword` | String | |
+| `associatedPersons` | List | |
+| `oxAuthTrustedClient` | Boolean | |
+| `responseTypes` | List | |
+| `grantTypes` | List | |
+| `logoUri` | String | |
+| `clientUri` | String | |
+| `policyUri` | String | |
+| `tosUri` | String | |
+| `jwksUri` | String | |
+| `jwks` | String | |
+| `sectorIdentifierUri` | String | | 
+| `subjectType` | String | `pairwise` |
+| | | `public` |
+| `idTokenTokenBindingCnf` | String | | 
+| `rptAsJwt` | Boolean | |
+| `accessTokenAsJwt` | Boolean | | 
+| `accessTokenSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenSignedResponseAlg` | String |`none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `idTokenEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `idTokenEncryptedResponseEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `userInfoSignedResponseAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `userInfoEncryptedResponseAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `userInfoEncryptedResponseEnc` | String |`A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `requestObjectSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `requestObjectEncryptionAlg` | String | `RSA1_5` |
+| | | `RSA-OAEP` |
+| | | `A128KW` |
+| | | `A256KW` |
+| `requestObjectEncryptionEnc` | String | `A128CBC+HS256` |
+| | | `A256CBC+HS512` |
+| | | `A128GCM` |
+| | | `A256GCM` |
+| `tokenEndpointAuthMethod` | String | `client_secret_basic` |
+| | | `client_secret_post` |
+| | | `client_secret_jwt` |
+| | | `private_key_jwt` |
+| | | `none` |
+| `tokenEndpointAuthSigningAlg` | String | `none` |
+| | | `HS256` |
+| | | `HS384` |
+| | | `HS512` |
+| | | `RS256` |
+| | | `RS384` |
+| | | `RS512` |
+| | | `ES256` |
+| | | `ES384` |
+| | | `ES512` |
+| `defaultMaxAge` | Integer | | 
+| `requireAuthTime` | Boolean | |  
+| `postLogoutRedirectUris` | List | | 
+| `claimRedirectURI` | List | |
+| `logoutUri` | List | |
+| `logoutSessionRequired` | Boolean | |
+| `oxAuthPersistClientAuthorizations` | Boolean | | 
+| `oxIncludeClaimsInIdToken` | Boolean | |
+| `oxRefreshTokenLifetime` | Integer | |
+| `accessTokenLifetime` | Integer | |
+| `defaultAcrValues` | List | |
+| `initiateLoginUri` | String | |
+| `clientSecretExpiresAt` | Date | |
+| `requestUris` | List | |
+| `authorizedOrigins` | List | | 
+| `softwareId` | String | |
+| `softwareVersion` | String | | 
+| `softwareStatement` | String | |
+| `disabled` | Boolean | |
+| `oxdId` | String | |
+| `oxAuthClientSecret` | String | | 
+| `attributes` | ClientAttributes | |
+| `baseDn` | String | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body |  | `OxAuthClient(OxAuthClient)` |
 
 ### updateCustomScript
 
 **URL**
 
+```
+//api/v1/configuration/scripts
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+CustomScript
+
+| Field | Data Type | Options|
+|---    | --- | --- |
+| `dn` | String | |
+| `inum` | String | | 
+| `name` | String | | 
+| `aliases` | List | | 
+| `description` | String | | 
+| `script` | String | | 
+| `scriptType` | String | `person_authentication`
+| | | `introspection` |
+| | | `resource_owner_password_credentials` |
+| | | `application_session` |
+| | | `cache_refresh` |
+| | | `update_user` |
+| | | `user_registration` |
+| | | `client_registration` |
+| | | `id_generator` |
+| | | `uma_rpt_policy` |
+| | | `uma_claims_gathering` |
+| | | `consent_gathering` |
+| | | `dynamic_scope` |
+| | | `scim` |
+| `programmingLanguage` | String | `python` |
+| | | `javascript` |
+| `moduleProperties` | List | | 
+| `configurationProperties` | List | | 
+| `level` | Integer | |
+| `revision` | Long | | 
+| `enabled` | Boolean | | 
+| `scriptError` | ScriptError | | 
+| `modified` | Boolean | | 
+| `internal` | Boolean | | 
+| `locationType` | String | `ldap` |
+| | | `file` |
+| `locationPath` | String | | 
+| `baseDn` | String | | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `CustomScript(CustomScript)` |
 
 ### updateGroup
 
 **URL**
 
+```
+//api/v1/groups
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+GluuGroupApi
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String | | 
+| `iname` | String | | 
+| `displayName` | String | | 
+| `description` | String | | 
+| `owner` | String | | 
+| `members` | List | | 
+| `organization` | String | | 
+| `status` | String | `active` |
+| | | `inactive` |
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `GluuPersonApi(GluuPersonApi)` |
 
 ### updateGroup1
 
 **URL**
 
+```
+//api/v1/users
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `inum` | String | |
+| `iname` | String  | |
+| `surName` | String | | 
+| `givenName` | String | | 
+| `email` | String | | 
+| `password` | String | | 
+| `userName` | String | | 
+| `displayName` | String | | 
+| `creationDate` | Date | | 
+| `status` | String | `active` |
+| | | `inactive` |
+| | | `expired` |
+| | | `register` |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `GluuPersonApi(GluuPersonApi)` |
 
 ### updateOxauthJsonSetting
 
 **URL**
 
+```
+//api/v1/configuration/oxauth/settings
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+oxAuthJsonConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `issuer` | String | 
+| `baseEndpoint` | String |
+| `authorizationEndpoint` | String | 
+| `tokenEndpoint` | String |
+| `tokenRevocationEndpoint` | String | 
+| `userInfoEndpoint` | String |
+| `clientInfoEndpoint` | String | 
+| `checkSessionIFrame` | String |
+| `endSessionEndpoint` | String | 
+| `jwksUri` | String |
+| `registrationEndpoint` | String |
+| `openIdDiscoveryEndpoint` | String | 
+| `openIdConfigurationEndpoint` | String | 
+| `idGenerationEndpoint` | String | 
+| `introspectionEndpoint` | String |
+| `umaConfigurationEndpoint` | String | 
+| `sectorIdentifierEndpoint` | String |
+| `oxElevenGenerateKeyEndpoint` | String | 
+| `oxElevenSignEndpoint` | String |
+| `oxElevenVerifySignatureEndpoint` | String | 
+| `oxElevenDeleteKeyEndpoint` | String | 
+| `oxElevenJwksEndpoint` | String | 
+| `openidSubAttribute` | String |
+| `responseTypesSupported` | List | 
+| `grantTypesSupported` | List |
+| `subjectTypesSupported` | List | 
+| `defaultSubjectType` | String |
+| `userInfoSigningAlgValuesSupported` | List | 
+| `userInfoEncryptionAlgValuesSupported` | List |
+| `userInfoEncryptionEncValuesSupported` | List | 
+| `idTokenSigningAlgValuesSupported` | List |
+| `idTokenEncryptionAlgValuesSupported` | List |
+| `idTokenEncryptionEncValuesSupported` | List |
+| `requestObjectSigningAlgValuesSupported` | List | 
+| `requestObjectEncryptionAlgValuesSupported` | List |
+| `requestObjectEncryptionEncValuesSupported` | List | 
+| `tokenEndpointAuthMethodsSupported` | List |
+| `tokenEndpointAuthSigningAlgValuesSupported` | List |
+| `dynamicRegistrationCustomAttributes` | List |
+| `displayValuesSupported` | List | 
+| `claimTypesSupported` | List |
+| `serviceDocumentation` | String |
+| `claimsLocalesSupported` | List |
+| `idTokenTokenBindingCnfValuesSupported` | List | 
+| `uiLocalesSupported` | List |
+| `dynamicGrantTypeDefault` | List |
+| `claimsParameterSupported` | Boolean |
+| `requestParameterSupported` | Boolean |
+| `requestUriParameterSupported` | Boolean | 
+| `requireRequestUriRegistration` | Boolean |
+| `allowPostLogoutRedirectWithoutValidation` | Boolean |
+| `introspectionAccessTokenMustHaveUmaProtectionScope` | Boolean | 
+| `opPolicyUri` | String | 
+| `opTosUri` | String |
+| `authorizationCodeLifetime` | Integer | 
+| `refreshTokenLifetime` | Integer | 
+| `idTokenLifetime` | Integer |
+| `accessTokenLifetime` | Integer | 
+| `umaResourceLifetime` | Integer | 
+| `sessionAsJwt` | Boolean | 
+| `umaRptLifetime` | Integer |
+| `umaTicketLifetime` | Integer | 
+| `umaPctLifetime` | Integer |
+| `umaAddScopesAutomatically` | Boolean | 
+| `umaValidateClaimToken` | Boolean | 
+| `umaGrantAccessIfNoPolicies` | Boolean |
+| `umaRestrictResourceToAssociatedClient` | Boolean |
+| `umaKeepClientDuringResourceSetRegistration` | Boolean | 
+| `umaRptAsJwt` | Boolean |
+| `cleanServiceInterval` | Integer |
+| `keyRegenerationEnabled` | Boolean | 
+| `keyRegenerationInterval` | Integer |
+| `defaultSignatureAlgorithm` | String | 
+| `oxOpenIdConnectVersion` | String | 
+| `organizationInum` | String | 
+| `oxId` | String |
+| `dynamicRegistrationEnabled` | Boolean | 
+| `dynamicRegistrationExpirationTime` | Integer |
+| `dynamicRegistrationPersistClientAuthorizations` | Boolean | 
+| `trustedClientEnabled` | Boolean |
+| `skipAuthorizationForOpenIdScopeAndPairwiseId` | Boolean | 
+| `dynamicRegistrationScopesParamEnabled` | Boolean |
+| `dynamicRegistrationCustomObjectClass` | String | 
+| `personCustomObjectClassList` | List | 
+| `persistIdTokenInLdap` | Boolean |
+| `persistRefreshTokenInLdap` | Boolean | 
+| `authenticationFiltersEnabled` | Boolean |
+| `invalidateSessionCookiesAfterAuthorizationFlow` | Boolean | 
+| `clientAuthenticationFiltersEnabled` | Boolean | 
+| `authenticationFilters` | List |
+| `clientAuthenticationFilters` | List | 
+| `configurationInum` | String | 
+| `sessionIdUnusedLifetime` | Integer |
+| `sessionIdUnauthenticatedUnusedLifetime` | Integer | 
+| `sessionIdEnabled` | Boolean |
+| `sessionIdPersistOnPromptNone` | Boolean | 
+| `sessionIdLifetime` | Integer |
+| `configurationUpdateInterval` | Integer | 
+| `cssLocation` | String | 
+| `jsLocation` | String |
+| `imgLocation` | String | 
+| `metricReporterInterval` |  Integer |
+| `metricReporterKeepDataDays` | Integer | 
+| `pairwiseIdType` | String |
+| `pairwiseCalculationKey` | String | 
+| `pairwiseCalculationSalt` | String |
+| `shareSubjectIdBetweenClientsWithSameSectorId` | Boolean | 
+| `webKeysStorage` | String | 
+| `dnName` | String |
+| `keyStoreFile` | String | 
+| `keyStoreSecret` | String |
+| `endSessionWithAccessToken` | Boolean | 
+| `clientWhiteList` | List | 
+| `clientBlackList` | List | 
+| `legacyIdTokenClaims` | Boolean |
+| `customHeadersWithAuthorizationResponse` | Boolean |
+| `frontChannelLogoutSessionSupported` | Boolean | 
+| `updateUserLastLogonTime` | Boolean | 
+| `updateClientAccessTime` | Boolean |
+| `enableClientGrantTypeUpdate` | Boolean | 
+| `corsConfigurationFilters` | List |
+| `logClientIdOnClientAuthentication` | Boolean  |
+| `logClientNameOnClientAuthentication` | Boolean | 
+| `httpLoggingEnabled` | Boolean | 
+| `httpLoggingExludePaths` | List |
+| `externalLoggerConfiguration` | String |
+| `authorizationRequestCustomAllowedParameters` | List | 
+| `legacyDynamicRegistrationScopeParam` | Boolean |
+| `openidScopeBackwardCompatibility` | Boolean |
+| `useCacheForAllImplicitFlowObjects` | Boolean | 
+| `disableU2fEndpoint` | Boolean | 
+| `authenticationProtectionConfiguration` | `AuthenticationProtectionConfiguration` | 
+| `fido2Configuration` | Fido2Configuration | 
+| `loggingLevel` | String | 
+| `errorHandlingMethod` | String |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `OxAuthJsonConfiguration(OxAuthJsonConfiguration)` |
 
 ### updateOxtrustJsonSetting
 
 **URL**
 
+```
+//api/v1/configuration/oxtrust/settings
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+OxTrustJsonSetting
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `orgName` | String | 
+| `supportEmail` | String | 
+| `scimTestMode` | Boolean |
+| `authenticationRecaptchaEnabled` | Boolean | 
+| `enforceEmailUniqueness` | Boolean |
+| `loggingLevel` | String |
+| `passwordResetRequestExpirationTime` | Integer |
+| `cleanServiceInterval` | Integer |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `OxTrustJsonSetting(OxTrustJsonSetting)` |
 
 ### updateOxtrustSetting
 
 **URL**
 
+```
+//api/v1/configuration/settings
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+OxtrustSetting
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `allowPasswordReset` | String | 
+| `enablePassport `| String | 
+| `enableScim` | String |
+| `allowProfileManagement` | String |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `OxtrustSetting(OxtrustSetting)` |
 
 ### updatePassportBasicConfig
 
 **URL**
 
+```
+//api/v1/passport/config
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+String
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `Configuration(Configuration)` |
 
 ### updatePassportProvider
 
 **URL**
 
+```
+//api/v1/passport/providers
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+Provider
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `id` | String | 
+| `displayName` | String | 
+| `type` | String | 
+| `mapping` | String | 
+| `passportStrategyId` | String | 
+| `enabled` | Boolean | 
+| `callbackUrl` | String | 
+| `requestForEmail` | Boolean | 
+| `emailLinkingSafe` | Boolean | 
+| `passportAuthnParams` | String | 
+| `options` | Map | 
+| `logo_img` | String |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | Provider(Provider) |
 
 ### updateRadiusClient
 
 **URL**
 
+```
+//api/v1/radius/clients
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+RadiusClient
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String | 
+| `name` | String | 
+| `ipAddress` | String | 
+| `secret` | String | 
+| `priority` | Integer |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `RadiusClient(RadiusClient)`
 
 ### updateScope
 
 **URL**
 
+```
+//api/v1/scopes
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+Scope
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | | 
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | | 
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `Scope(Scope)` |
 
 ### updateSectorIdentifier
 
 **URL**
 
+```
+//api/v1/sectoridentifiers
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+OxAuthSectorIdentifier
+
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `selected` | Boolean | 
+| `id` | String | 
+| `description` | String | 
+| `redirectUris` | List | 
+| `clientIds` | List | 
+| `loginUri` | String | 
+| `baseDn` | String | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
 
 ### updateServerConfiguration
 
 **URL**
 
+```
+//api/v1/radius/settings
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+ServerConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `listenInterface` | String | 
+| `authPort` | Integer | 
+| `acctPort` | Integer | 
+| `openidUsername` | String | 
+| `openidPassword` | String | 
+| `openidBaseUrl` | String | 
+| `acrValue` | String | 
+| `scopes` | List | 
+| `authenticationTimeout` | Integer | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `ServerConfiguration(ServerConfiguration)` |
 
 ### updateSmtpConfiguration
 
 **URL**
 
+```
+//api/v1/configuration/smtp
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+SmtpConfiguration
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `valid` | Boolean | 
+| `host` | String | 
+| `port` | Integer | 
+| `requires-ssl` | Boolean | 
+| `trust-host` | Boolean |
+| `from-name` | String | 
+| `from-email-address` | String |
+| `requires-authentication` | Boolean | 
+| `user-name` | String |
+| `password` | String | 
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `SmtpConfiguration(SmtpConfiguration)` |
 
 ### updateUmaResource
 
 **URL**
 
+```
+//api/v1/uma/resources
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
+UmaResource
+
 | Field | Data Type |
 |---    | --- |
-| | |
+| `dn` | String | 
+| `inum` | String | 
+| `id` | String | 
+| `name` | String | 
+| `iconUri` | String | 
+| `scopes` | List | 
+| `scopeExpression` | String | 
+| `clients` | List | 
+| `resources` | List | 
+| `rev` | String | 
+| `creator` | String | 
+| `description` | String | 
+| `type` | String | 
+| `creationDate` | Date | 
+| `expirationDate` | Date | 
+| `deletable` | Boolean |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `UmaResource(UmaResource)` |
 
 ### updateUmaScope
 
 **URL**
 
+```
+//api/v1/uma/scopes
+```
+
 **HTTP Method**
+
+`PUT`
 
 **Response Type**
 
-| Field | Data Type |
-|---    | --- |
-| | |
+Scope
+
+| Field | Data Type | Options |
+|---    | --- | --- |
+| `dn` | String | | 
+| `inum` | String | | 
+| `displayName` | String | | 
+| `id` | String | | 
+| `iconUrl` | String | | 
+| `description` | String | | 
+| `scopeType` | String | `openid` |
+| | | `dynamic` |
+| | | `uma` |
+| | | `oauth` |
+| `oxAuthClaims` | List | | 
+| `defaultScope` | Boolean | | 
+| `oxAuthGroupClaims` | Boolean | | 
+| `dynamicScopeScripts` | List | | 
+| `umaAuthorizationPolicies` | List | | 
+| `umaType` | Boolean | |
 
 **Parameters**
 
 | Location | Parameter Name | Input |
 | --- | --- | --- |
-| | |
+| Body | | `Scope(Scope)` |
