@@ -2,14 +2,14 @@
 
 ## Overview
 
-This page is a work in progress. While it's being constructed, temporary API documentation can be found [here](https://gluu.org/docs/oxtrustapi/)
+New in Gluu Server version 4.0, most federation management options offered through the [oxTrust GUI](https://gluu.org/docs/ce/4.0/admin-guide/oxtrust-ui/) are now available through APIs. 
 
 !!! Important
-    oxTrust API support is only guaranteed for customers with a [VIP subscription](https://www.gluu.org/pricing#vip).
+    oxTrust API support is only offered to customers with a [VIP subscription](https://www.gluu.org/pricing#vip).
 
 ## Adding oxTrust API capability to the Gluu Server
 
-To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .jar file into the Identity WAR. In Gluu Server Community Edition 4.0, we've simplified that process. Follow these steps:
+To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .jar file into the Identity WAR. In Gluu Server CE 4.0, we've simplified that process. Follow these steps:
 
 1. Inside the cron, navigate to `/custom/libs/`
 
