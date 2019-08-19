@@ -37,4 +37,4 @@ nav:
     - '4.0 Beta': 'https://gluu.org/docs/oxtrust-api/4.0/'
 - ' ': 'https://gluu.org/docs'
 - ' ': 'https://gluu.org/docs'
-- Home: 'admin-api.md'
+- Home: 'index.md'
