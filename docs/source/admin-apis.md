@@ -23,7 +23,7 @@ To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .
 
 1. Create a file called `identity.xml` if it does not already exist
 
-1. Add the following code to `identity.xml`:
+1. Add the following to `identity.xml`:
 
     ```
     <?xml version="1.0"  encoding="ISO-8859-1"?>
