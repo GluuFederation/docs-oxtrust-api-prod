@@ -6,7 +6,42 @@ This page is a work in progress. While it's being constructed, temporary API doc
 
 !!! Important
     oxTrust API support is only guaranteed for customers with a [VIP subscription](https://www.gluu.org/pricing#vip).
-    
+
+## Adding oxTrust API capability to the Gluu Server
+
+To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .jar file into the Identity WAR. In Gluu Server Community Edition 4.0, we've simplified that process. Follow these steps:
+
+1. Inside the cron, navigate to `/custom/libs/`
+
+1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 beta version currently installed:
+
+    - [Beta 3](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b3/oxtrust-api-server-4.0.b3.jar)
+    - [Beta 2](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b2/oxtrust-api-server-4.0.b2.jar)
+    - [Beta 1](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b1/oxtrust-api-server-4.0.b1.jar)
+
+1. Navigate to `/opt/gluu/jetty/identity/webapps/`
+
+1. Create a file called `identity.xml` if it does not already exist
+
+1. Add the following code to `identity.xml`:
+
+    ```
+    <?xml version="1.0"  encoding="ISO-8859-1"?>
+    <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+    <Configure class="org.eclipse.jetty.webapp.WebAppContext">
+      <Set name="contextPath">/identity</Set>
+      <Set name="war"><Property name="jetty.webapps" default="."/>/identity.war</Set>
+      <Set name="extractWAR">true</Set>
+
+      <Set name="extraClasspath">./custom/libs/[jarName].jar</Set>
+    </Configure>
+    ```
+
+1. On the second to last line, change `[jarName]` to the name of the .jar file downloaded in step 2.
+
+1. [Restart](https://gluu.org/docs/ce/4.0/operation/services/#restart) the `identity` service.
+
 ## Available APIs
 
 | API | Description |
