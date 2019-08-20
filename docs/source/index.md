@@ -206,6 +206,8 @@ UmaResource
 | Path | `id` | String |
 | Path | `inum` | String |
 
+-----
+
 ### addGroupMember
 
 **URL**
@@ -228,6 +230,8 @@ String
 | --- | --- | --- |
 | Path | `inum` | String |
 | Path | `minum` | String |
+
+-----
 
 ### addRadiusClient
 
@@ -260,6 +264,8 @@ RadiusClient
 | --- | --- | --- |
 | Body | | `RadiusClient(RadiusClient)` |
 
+-----
+
 ### addScopeToClient
 
 **URL**
@@ -282,6 +288,8 @@ String
 | --- | --- | --- |
 | Path | `inum` | String |
 | Path | `sinum` | String |
+
+-----
 
 ### addScopeToUmaResource
 
@@ -325,6 +333,8 @@ UmaResource
 | Path | `id` | String |
 | Path | `inum` | String |
 
+-----
+
 ### create
 
 **URL**
@@ -361,6 +371,8 @@ LdapConfigurationDTO
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `LdapConfigurationDTO(LdapConfigurationDTO)` |
+
+-----
 
 ### createAttribute
 
@@ -430,6 +442,8 @@ GluuAttribute
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `GluuAttribute(GluuAttribute)` |
+
+-----
 
 ### createClient
 
@@ -589,6 +603,8 @@ OxAuthClient
 | --- | --- | --- |
 | Body |  | `OxAuthClient(OxAuthClient)` |
 
+-----
+
 ### createCustomScript
 
 **URL**
@@ -648,6 +664,8 @@ CustomScript
 | --- | --- | --- |
 | Body | | `CustomScript(CustomScript)` |
 
+-----
+
 ### createGroup
 
 **URL**
@@ -683,6 +701,8 @@ GluuGroupApi
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body |  | `GluuGroupApi(GluuGroupApi)` |
+
+-----
 
 ### createPassportProvider
 
@@ -721,6 +741,8 @@ Provider
 | --- | --- | --- |
 | Body |  | `Provider(Provider)` |
 
+-----
+
 ### createPerson
 
 **URL**
@@ -758,6 +780,8 @@ GluuPersonAPI
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `GluuPersonApi(GluuPersonApi)` |
+
+-----
 
 ### createScope
 
@@ -800,6 +824,8 @@ Scope
 | --- | --- | --- |
 | Body |  | `Scope(Scope)` |
 
+-----
+
 ### createSectorIdentifier
 
 **URL**
@@ -832,6 +858,8 @@ OxAuthSectoryIdentifier
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body |  | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
+
+-----
 
 ### createUmaResource
 
@@ -874,6 +902,8 @@ UmaResource
 | --- | --- | --- |
 | Body |  | `UmaResource(UmaResource)` |
 
+-----
+
 ### createUmaScope
 
 **URL**
@@ -915,6 +945,8 @@ Scope
 | --- | --- | --- |
 | Body |  | `Scope(Scope)` |
 
+-----
+
 ### delete
 
 **URL**
@@ -937,6 +969,8 @@ String
 | --- | --- | --- |
 | Path | `name` | String |
 
+-----
+
 ### deleteAllProviders
 
 **URL**
@@ -957,6 +991,8 @@ None
 
 None
 
+-----
+
 ### deleteAllUmaScopes
 
 **URL**
@@ -976,6 +1012,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deleteAttribute
 
@@ -999,6 +1037,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteAttributes
 
 **URL**
@@ -1018,6 +1058,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deleteClient
 
@@ -1041,6 +1083,8 @@ String
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteClientScopes
 
 **URL**
@@ -1063,6 +1107,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteClients
 
 **URL**
@@ -1082,6 +1128,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deleteCustomScript
 
@@ -1105,6 +1153,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteGroup
 
 **URL**
@@ -1127,6 +1177,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteGroupMembers
 
 **URL**
@@ -1146,6 +1198,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deleteGroups
 
@@ -1167,6 +1221,8 @@ None
 
 None
 
+-----
+
 ### deletePeople
 
 **URL**
@@ -1186,6 +1242,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deletePerson
 
@@ -1209,6 +1267,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteProvider
 
 **URL**
@@ -1230,6 +1290,8 @@ None
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `id` | String |
+
+-----
 
 ### deleteRadiusClient
 
@@ -1253,6 +1315,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteScope
 
 **URL**
@@ -1275,6 +1339,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteScopes
 
 **URL**
@@ -1294,6 +1360,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### deleteSectorIdentifier
 
@@ -1317,6 +1385,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### deleteUmaResource
 
 **URL**
@@ -1338,6 +1408,8 @@ None
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `id` | String |
+
+-----
 
 ### deleteUmaScope
 
@@ -1361,6 +1433,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getAllActiveAttributes
 
 **URL**
@@ -1380,6 +1454,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### getAllAttributes
 
@@ -1401,6 +1477,8 @@ String
 
 None
 
+-----
+
 ### getAllInactiveAttributes
 
 **URL**
@@ -1420,6 +1498,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### getAllScopes
 
@@ -1441,6 +1521,8 @@ String
 
 None
 
+-----
+
 ### getAllSectorIdentifiers
 
 **URL**
@@ -1460,6 +1542,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### getAttributeByInum
 
@@ -1530,6 +1614,8 @@ GluuAttribute
 | --- | --- | --- |
 | Path  | `inum` | String |
 
+-----
+
 ### getCasConfig
 
 **URL**
@@ -1554,6 +1640,8 @@ CasProtocolDTO
 **Parameters**
 
 None
+
+-----
 
 ### getClientByInum
 
@@ -1713,6 +1801,8 @@ OxAuthClient
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getClientScope
 
 **URL**
@@ -1734,6 +1824,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `inum` | String |
+
+-----
 
 ### getConfiguration
 
@@ -1807,6 +1899,8 @@ GluuConfiguration
 
 None
 
+-----
+
 ### getCurrentAuthentication
 
 **URL**
@@ -1829,6 +1923,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### getCustomScriptsByInum
 
@@ -1888,6 +1984,8 @@ CustomScript
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getGroupByInum
 
 **URL**
@@ -1924,6 +2022,8 @@ GluuGroupApi
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getGroupMembers
 
 **URL**
@@ -1945,6 +2045,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `inum` | String |
+
+-----
 
 ### getOxAuthJsonSettings
 
@@ -2104,6 +2206,8 @@ oxAuthJsonConfiguration
 
 None
 
+-----
+
 ### getOxtrustJsonSettings
 
 **URL**
@@ -2135,6 +2239,8 @@ OxTrustJsonSetting
 
 None
 
+-----
+
 ### getOxtrustSettings
 
 **URL**
@@ -2162,6 +2268,8 @@ OxtrustSetting
 
 None
 
+-----
+
 ### getPassportBasicConfig
 
 **URL**
@@ -2181,6 +2289,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### getPersonByInum
 
@@ -2220,6 +2330,8 @@ GluuPersonAPI
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getProviderById
 
 **URL**
@@ -2255,6 +2367,8 @@ GluuPersonAPI
 | --- | --- | --- |
 | Path | `id` | String |
 
+-----
+
 ### getRadiusClient
 
 **URL**
@@ -2285,6 +2399,8 @@ RadiusClient
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `inum` | String |
+
+-----
 
 ### getScopeByInum
 
@@ -2327,6 +2443,8 @@ Scope
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### getScopeClaims
 
 **URL**
@@ -2348,6 +2466,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `inum` | String |
+
+-----
 
 ### getSectorIdentifierById
 
@@ -2382,6 +2502,8 @@ OxAuthSectorIdentifier
 | --- | --- | --- |
 | Path | `id` | String |
 
+-----
+
 ### getServerConfig
 
 **URL**
@@ -2415,6 +2537,8 @@ ServerConfiguration
 
 None
 
+-----
+
 ### getServerStatus
 
 **URL**
@@ -2444,6 +2568,8 @@ None
 **Parameters**
 
 None
+
+-----
 
 ### getSmtpServerConfiguration
 
@@ -2477,6 +2603,8 @@ SmtpConfiguration
 **Parameters**
 
 None
+
+-----
 
 ### getUmaResourceById
 
@@ -2519,6 +2647,8 @@ UmaResource
 | --- | --- | --- |
 | Path | `id` | String |
 
+-----
+
 ### getUmaResourceClients
 
 **URL**
@@ -2541,6 +2671,8 @@ None
 | --- | --- | --- |
 | Path | `id` | String |
 
+-----
+
 ### getUmaResourceScopes
 
 **URL**
@@ -2562,6 +2694,8 @@ None
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Path | `id` | String |
+
+-----
 
 ### getUmaScopeByInum
 
@@ -2604,6 +2738,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 
+-----
+
 ### listCertificates
 
 **URL**
@@ -2623,6 +2759,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### listClients
 
@@ -2644,6 +2782,8 @@ String
 
 None
 
+-----
+
 ### listCustomScripts
 
 **URL**
@@ -2663,6 +2803,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### listCustomScriptsByType
 
@@ -2686,6 +2828,8 @@ String
 | --- | --- | --- |
 | Path | `type` | String |
 
+-----
+
 ### listGroups
 
 **URL**
@@ -2708,6 +2852,8 @@ String
 | --- | --- | --- |
 | Query | `size` | Integer |
 
+-----
+
 ### listPeople
 
 **URL**
@@ -2727,6 +2873,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### listProviders
 
@@ -2748,6 +2896,8 @@ String
 
 None
 
+-----
+
 ### listRadiusClients
 
 **URL**
@@ -2765,6 +2915,10 @@ None
 String
 
 **Parameters**
+
+None
+
+-----
 
 ### listUmaResources
 
@@ -2786,6 +2940,8 @@ String
 
 None
 
+-----
+
 ### listUmaScopes
 
 **URL**
@@ -2806,6 +2962,8 @@ String
 
 None
 
+-----
+
 ### read
 
 **URL**
@@ -2825,6 +2983,8 @@ String
 **Parameters**
 
 None
+
+-----
 
 ### removeClientToUmaResource
 
@@ -2868,6 +3028,8 @@ UmaResource
 | Path | `id` | String |
 | Path | `inum` | String |
 
+-----
+
 ### removeGroupMember
 
 **URL**
@@ -2890,6 +3052,8 @@ None
 | --- | --- | --- |
 | Path | `inum` | String |
 | Path | `minum` | String |
+
+-----
 
 ### removeScopeToClient
 
@@ -2915,6 +3079,8 @@ String
 | --- | --- | --- |
 | Path | `inum` | String |
 | Path | `sinum` | String |
+
+-----
 
 ### removeScopeToUmaResource
 
@@ -2958,6 +3124,8 @@ UmaResource
 | Path | `id` | String |
 | Path | `inum` | String |
 
+-----
+
 ### searchAttributes
 
 **URL**
@@ -2971,7 +3139,6 @@ UmaResource
 `GET`
 
 **Response Type**
-
 
 GluuAttribute
 
@@ -3029,6 +3196,8 @@ GluuAttribute
 | Query | `pattern` | String |
 | Query | `size` | Integer |
 
+-----
+
 ### searchGroups
 
 **URL**
@@ -3051,6 +3220,8 @@ String
 | --- | --- | --- |
 | Query | `pattern` | String |
 | Query | `size` | Integer |
+
+-----
 
 ### searchGroups1
 
@@ -3075,6 +3246,8 @@ String
 | Query | `pattern` | String |
 | Query | `size` | Integer |
 
+-----
+
 ### searchGroups2
 
 **URL**
@@ -3096,6 +3269,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Query | `pattern` | String |
+
+----
 
 ### searchScope
 
@@ -3120,6 +3295,8 @@ String
 | Query | `pattern` | String |
 | Query | `size` | Integer |
 
+-----
+
 ### searchSectorIdentifier
 
 **URL**
@@ -3143,6 +3320,8 @@ String
 | Query | `pattern` | String |
 | Query | `size` | Integer |
 
+-----
+
 ### searchUmaResources
 
 **URL**
@@ -3165,6 +3344,8 @@ String
 | Query | `pattern` | String |
 | Query | `size` | Integer |
 
+-----
+
 ### searchUmaScopes
 
 **URL**
@@ -3186,6 +3367,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Query | `pattern` | String |
+
+-----
 
 ### status
 
@@ -3213,6 +3396,8 @@ ConnectionStatusDTO
 |---    | --- |
 | Body |  | `LdapConnectionData(LdapConnectionData)` |
 
+-----
+
 ### status1
 
 **URL**
@@ -3238,6 +3423,8 @@ ConnectionStatusDTO
 | Location | Parameter Name | Input |
 |---    | --- |
 | Path | `name` | String |
+
+-----
 
 ### testSmtpConfiguration
 
@@ -3272,6 +3459,8 @@ SmtpConfiguration
 
 None
 
+-----
+
 ### update
 
 **URL**
@@ -3298,6 +3487,8 @@ CasProtocolDTO
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body |  | `CasProtocolDTO(CasProtocolDTO)` |
+
+-----
 
 ### update1
 
@@ -3335,6 +3526,8 @@ LdapConfigurationDTO
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `LdapConfigurationDTO(LdapConfiguraitonDTO)` |
+
+-----
 
 ### updateAttribute
 
@@ -3405,6 +3598,8 @@ GluuAttribute
 | --- | --- | --- |
 | Body | | `GluuAttribute(GluuAttribute)` |
 
+-----
+
 ### updateAuthenticationMethod
 
 **URL**
@@ -3429,6 +3624,8 @@ GluuAttribute
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `AuthenticationMethod(AuthenticationMethod)` |
+
+-----
 
 ### updateClient
 
@@ -3588,6 +3785,8 @@ OxAuthClient
 | --- | --- | --- |
 | Body |  | `OxAuthClient(OxAuthClient)` |
 
+-----
+
 ### updateCustomScript
 
 **URL**
@@ -3647,6 +3846,8 @@ CustomScript
 | --- | --- | --- |
 | Body | | `CustomScript(CustomScript)` |
 
+-----
+
 ### updateGroup
 
 **URL**
@@ -3683,6 +3884,8 @@ GluuGroupApi
 | --- | --- | --- |
 | Body | | `GluuPersonApi(GluuPersonApi)` |
 
+-----
+
 ### updateGroup1
 
 **URL**
@@ -3718,6 +3921,8 @@ GluuGroupApi
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `GluuPersonApi(GluuPersonApi)` |
+
+-----
 
 ### updateOxauthJsonSetting
 
@@ -3879,6 +4084,8 @@ oxAuthJsonConfiguration
 | --- | --- | --- |
 | Body | | `OxAuthJsonConfiguration(OxAuthJsonConfiguration)` |
 
+-----
+
 ### updateOxtrustJsonSetting
 
 **URL**
@@ -3912,6 +4119,8 @@ OxTrustJsonSetting
 | --- | --- | --- |
 | Body | | `OxTrustJsonSetting(OxTrustJsonSetting)` |
 
+-----
+
 ### updateOxtrustSetting
 
 **URL**
@@ -3941,6 +4150,8 @@ OxtrustSetting
 | --- | --- | --- |
 | Body | | `OxtrustSetting(OxtrustSetting)` |
 
+-----
+
 ### updatePassportBasicConfig
 
 **URL**
@@ -3962,6 +4173,8 @@ String
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `Configuration(Configuration)` |
+
+-----
 
 ### updatePassportProvider
 
@@ -4000,6 +4213,8 @@ Provider
 | --- | --- | --- |
 | Body | | Provider(Provider) |
 
+-----
+
 ### updateRadiusClient
 
 **URL**
@@ -4030,6 +4245,8 @@ RadiusClient
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `RadiusClient(RadiusClient)`
+
+-----
 
 ### updateScope
 
@@ -4072,6 +4289,8 @@ Scope
 | --- | --- | --- |
 | Body | | `Scope(Scope)` |
 
+-----
+
 ### updateSectorIdentifier
 
 **URL**
@@ -4105,6 +4324,8 @@ OxAuthSectorIdentifier
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `OxAuthSectorIdentifier(OxAuthSectorIdentifier)` |
+
+-----
 
 ### updateServerConfiguration
 
@@ -4141,6 +4362,8 @@ ServerConfiguration
 | --- | --- | --- |
 | Body | | `ServerConfiguration(ServerConfiguration)` |
 
+-----
+
 ### updateSmtpConfiguration
 
 **URL**
@@ -4175,6 +4398,8 @@ SmtpConfiguration
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `SmtpConfiguration(SmtpConfiguration)` |
+
+-----
 
 ### updateUmaResource
 
@@ -4216,6 +4441,8 @@ UmaResource
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `UmaResource(UmaResource)` |
+
+-----
 
 ### updateUmaScope
 
