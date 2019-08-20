@@ -11,7 +11,7 @@ New in Gluu Server version 4.0, most federation management options offered throu
 
 To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .jar file into the Identity WAR. In Gluu Server CE 4.0, we've simplified that process. Follow these steps:
 
-1. Inside the cron, navigate to `/custom/libs/`
+1. Inside the cron, navigate to `/custom/libs/`.
 
 1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 beta version currently installed:
 
@@ -19,9 +19,9 @@ To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .
     - [Beta 2](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b2/oxtrust-api-server-4.0.b2.jar)
     - [Beta 1](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b1/oxtrust-api-server-4.0.b1.jar)
 
-1. Navigate to `/opt/gluu/jetty/identity/webapps/`
+1. Navigate to `/opt/gluu/jetty/identity/webapps/`.
 
-1. Create a file called `identity.xml` if it does not already exist
+1. Create a file called `identity.xml` if it does not already exist.
 
 1. Add the following to `identity.xml`:
 
