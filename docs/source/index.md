@@ -2,16 +2,18 @@
 
 ## Overview
 
-New in Gluu Server version 4.0, most federation management options offered through the [oxTrust GUI](https://gluu.org/docs/ce/4.0/admin-guide/oxtrust-ui/) are now available through APIs. 
+Gluu Server 4.0 offers REST APIs for the [oxTrust GUI](https://gluu.org/docs/ce/4.0/admin-guide/oxtrust-ui/). With the REST API, server configurations can be automated, new GUIs can be built to expose specific admin functionality, and other integrations can be created for the Gluu admin portal.
 
-!!! Important
-    oxTrust API support is only offered to customers with a [VIP subscription](https://www.gluu.org/pricing#vip).
+!!! Attention
+    The REST APIs are still under development, and are *not* stable. 
 
-## Adding oxTrust API capability to the Gluu Server
+## Installation
 
-To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .jar file into the Identity WAR. In Gluu Server CE 4.0, we've simplified that process. Follow these steps:
+To add the oxTrust REST API to an existing Gluu 4.0.x deployment, a new `.jar` file needs to be added to `identity.war`. 
 
-1. Inside the cron, navigate to `/custom/libs/`.
+Follow these steps:
+
+1. Inside the chroot, navigate to `/custom/libs/`.
 
 1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 beta version currently installed:
 
@@ -38,7 +40,7 @@ To enable an existing Gluu Server to use oxTrust APIs, an admin must add a new .
     </Configure>
     ```
 
-1. On the second to last line, change `[jarName]` to the name of the .jar file downloaded in step 2.
+1. On the second to last line, replace `[jarName]` with the name of the `.jar` file downloaded in step 2.
 
 1. [Restart](https://gluu.org/docs/ce/4.0/operation/services/#restart) the `identity` service.
 
