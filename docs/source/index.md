@@ -1,4 +1,4 @@
-# Admin Configuration APIs
+# oxTrust Admin REST APIs
 
 ## Overview
 
