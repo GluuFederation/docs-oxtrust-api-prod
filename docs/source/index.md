@@ -1,4 +1,4 @@
-# oxTrust Admin REST APIs
+# Admin REST APIs
 
 ## Overview
 
