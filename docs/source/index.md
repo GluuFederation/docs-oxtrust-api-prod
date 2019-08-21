@@ -9,11 +9,9 @@ Gluu Server 4.0.x offers REST APIs for the [oxTrust Admin GUI](https://gluu.org/
 
 ## Installation
 
-To add the oxTrust REST API to an existing Gluu 4.0.x deployment, a new `.jar` file needs to be added to `identity.war`. 
+Add the REST API extension to an existing Gluu 4.0.x deployment by following these steps:
 
-Follow these steps:
-
-1. Inside the chroot, navigate to `/custom/libs/`.
+1. Inside the Gluu chroot, navigate to `/custom/libs/`.
 
 1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 beta version currently installed:
 
