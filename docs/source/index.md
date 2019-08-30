@@ -461,8 +461,7 @@ OxAuthClient
 | `iname` | String | |
 | `displayName` | String | | 
 | `description` | String  | |
-| `oxAuthAppType` | String | `web` |
-| | | `native` |
+| `oxAuthAppType` | String | <ul> <li> `web` </li> <li> `native` </li> |
 | `contacts` | List | |
 | `oxAuthRedirectURIs` | List | | 
 | `oxAuthPostLogoutRedirectURIs` | List | |
@@ -496,7 +495,7 @@ OxAuthClient
 | `requestObjectEncryptionAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
 | `requestObjectEncryptionEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
 | `tokenEndpointAuthMethod` | String | <ul> <li> `client_secret_basic` </li> <li> `client_secret_post` </li> <li> `client_secret_jwt` </li> <li> `private_key_jwt` </li> <li> `none` </li> |
-| `tokenEndpointAuthSigningAlg` | String | `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `tokenEndpointAuthSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
 | `defaultMaxAge` | Integer | | 
 | `requireAuthTime` | Boolean | |  
 | `postLogoutRedirectUris` | List | | 
@@ -600,10 +599,7 @@ GluuGroupApi
 | `owner` | String | | 
 | `members` | List | | 
 | `organization` | String | | 
-| `status` | String | `active` |
-| | | `inactive` |
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register`  </li> </ul>|
 
 **Parameters**
 
@@ -679,10 +675,7 @@ GluuPersonAPI
 | `userName` | String | |
 | `displayName` | String | |
 | `creationDate` | Date | |
-| `status` | String | `active` |
-| | | `inactive` | 
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 
 **Parameters**
 
@@ -716,10 +709,7 @@ Scope
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid` </li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
@@ -837,10 +827,7 @@ Scope
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid`</li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
@@ -1484,12 +1471,7 @@ GluuAttribute
 | `displayName` | String |  
 | `description` | String |
 | `origin` | String | 
-| `dataType` | String | `string` |
-| | | `numeric` |
-| | | `boolean` |
-| | | `binary` |
-| | | `certificate` |
-| | | `generalizedTime` |
+| `dataType` | String | <ul> <li> `string` </li> <li> `numeric` </li> <li> `boolean` </li> <li> `binary` </li> <li> `certificate` </li> <li> `generalizedTime` </li> </ul>|
 | `editType` | List | |
 | `viewType` | List | |
 | `usageType` | List | |
@@ -1576,8 +1558,7 @@ OxAuthClient
 | `iname` | String | |
 | `displayName` | String | | 
 | `description` | String | |
-| `oxAuthAppType` | String | `web` |
-| | | `native` |
+| `oxAuthAppType` | String | <ul> <li> `web` </li> <li> `native` </li> </ul> |
 | `contacts` | List | |
 | `oxAuthRedirectURIs` | List | | 
 | `oxAuthPostLogoutRedirectURIs` | List | | 
@@ -1601,85 +1582,18 @@ OxAuthClient
 | `idTokenTokenBindingCnf` | String | | 
 | `rptAsJwt` | Boolean | |
 | `accessTokenAsJwt` | Boolean | | 
-| `accessTokenSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `idTokenSignedResponseAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `idTokenEncryptedResponseAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `idTokenEncryptedResponseEnc` | String | `A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `userInfoSignedResponseAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `userInfoEncryptedResponseAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `userInfoEncryptedResponseEnc` | String | `A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `requestObjectSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `requestObjectEncryptionAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `requestObjectEncryptionEnc` | String | `A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `tokenEndpointAuthMethod` | String | `client_secret_basic` |
-| | | `client_secret_post` |
-| | | `client_secret_jwt` |
-| | | `private_key_jwt` |
-| | | `none` |
-| `tokenEndpointAuthSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
+| `accessTokenSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul>
+| `idTokenSignedResponseAlg` | String | <ul> <li>`none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `idTokenEncryptedResponseAlg` | String | <ul> <li>`RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW`</li> <li> `A256KW` </li> </ul> |
+| `idTokenEncryptedResponseEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `userInfoSignedResponseAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `userInfoEncryptedResponseAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
+| `userInfoEncryptedResponseEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `requestObjectSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `requestObjectEncryptionAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
+| `requestObjectEncryptionEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `tokenEndpointAuthMethod` | String | <ul> <li> `client_secret_basic` </li> <li> `client_secret_post` </li> <li> `client_secret_jwt` </li> <li> `private_key_jwt` </li> <li> `none` </li> </ul> |
+| `tokenEndpointAuthSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
 | `defaultMaxAge` | Integer | | 
 | `requireAuthTime` | Boolean | |
 | `postLogoutRedirectUris` | List | |  
@@ -1768,10 +1682,7 @@ GluuConfiguration
 | `systemUptime` | String | |
 | `lastUpdate` | Date | |
 | `pollingInterval` | String | | 
-| `status` | String | `active` |
-| | | `inactive` |
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 | `userPassword` | String | | 
 | `gluuHttpStatus` | String | |
 | `gluuDSStatus` | String | |
@@ -1857,22 +1768,8 @@ CustomScript
 | `aliases` | List | | 
 | `description` | String | | 
 | `script` | String | | 
-| `scriptType` | String | `person_authentication`
-| | | `introspection` |
-| | | `resource_owner_password_credentials` |
-| | | `application_session` |
-| | | `cache_refresh` |
-| | | `update_user` |
-| | | `user_registration` |
-| | | `client_registration` |
-| | | `id_generator` |
-| | | `uma_rpt_policy` |
-| | | `uma_claims_gathering` |
-| | | `consent_gathering` |
-| | | `dynamic_scope` |
-| | | `scim` |
-| `programmingLanguage` | String | `python` |
-| | | `javascript` |
+| `scriptType` | String | <ul> <li> `person_authentication` </li> <li> `introspection` </li> <li> `resource_owner_password_credentials` </li> <li> `application_session` </li> <li> `cache_refresh` </li> <li> `update_user` </li> <li> `user_registration` </li> <li> `client_registration` </li> <li> `id_generator` </li> <li> `uma_rpt_policy` </li> <li> `uma_claims_gathering` </li> <li> `consent_gathering` </li> <li> `dynamic_scope` </li> <li> `scim` </li> </ul>|
+| `programmingLanguage` | String | <ul> <li> `python` </li> <li> `javascript` </li> </ul> |
 | `moduleProperties` | List | | 
 | `configurationProperties` | List | | 
 | `level` | Integer | |
@@ -1881,8 +1778,7 @@ CustomScript
 | `scriptError` | ScriptError | | 
 | `modified` | Boolean | | 
 | `internal` | Boolean | | 
-| `locationType` | String | `ldap` |
-| | | `file` |
+| `locationType` | String | <ul> <li> `ldap` </li> <li> `file` </li> </ul> |
 | `locationPath` | String | | 
 | `baseDn` | String | | 
 
@@ -1920,10 +1816,7 @@ GluuGroupApi
 | `owner` | String | | 
 | `members` | List | | 
 | `organization` | String | | 
-| `status` | String | `active` |
-| | | `inactive` |
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 
 **Parameters**
 
@@ -2228,10 +2121,7 @@ GluuPersonAPI
 | `userName` | String | |
 | `displayName` | String | |
 | `creationDate` | Date | |
-| `status` | String | `active` |
-| | | `inactive` | 
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul>|
 
 **Parameters**
 
@@ -2335,10 +2225,7 @@ Scope
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid` </li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
@@ -2630,10 +2517,7 @@ None
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid` </li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
@@ -3058,19 +2942,14 @@ GluuAttribute
 | `inum` | String | | 
 | `type` | String | | 
 | `lifetime` | String | | 
-| `sourceAttribute` | String | 
-| `salt` | String |
-| `nameIdType` | String | 
-| `name` | String |
-| `displayName` | String |  
-| `description` | String |
-| `origin` | String | 
-| `dataType` | String | `string` |
-| | | `numeric` |
-| | | `boolean` |
-| | | `binary` |
-| | | `certificate` |
-| | | `generalizedTime` |
+| `sourceAttribute` | String | |
+| `salt` | String | |
+| `nameIdType` | String | | 
+| `name` | String | |
+| `displayName` | String | |  
+| `description` | String | |
+| `origin` | String | | 
+| `dataType` | String | <ul> <li> `string` </li> <li> `numeric` </li> <li> `boolean` </li> <li> `binary` </li> <li> `certificate` </li> <li> `generalizedTime` </li> </ul> |
 | `editType` | List | |
 | `viewType` | List | |
 | `usageType` | List | |
@@ -3461,19 +3340,14 @@ GluuAttribute
 | `inum` | String | | 
 | `type` | String | | 
 | `lifetime` | String | | 
-| `sourceAttribute` | String | 
-| `salt` | String |
-| `nameIdType` | String | 
-| `name` | String |
-| `displayName` | String |  
-| `description` | String |
-| `origin` | String | 
-| `dataType` | String | `string` |
-| | | `numeric` |
-| | | `boolean` |
-| | | `binary` |
-| | | `certificate` |
-| | | `generalizedTime` |
+| `sourceAttribute` | String | |
+| `salt` | String | |
+| `nameIdType` | String | | 
+| `name` | String | |
+| `displayName` | String | |  
+| `description` | String | |
+| `origin` | String |  |
+| `dataType` | String | <ul> <li> `string` </li> <li> `numeric` </li> <li> `boolean` </li> <li> `binary` </li> <li> `certificate` </li> <li> `generalizedTime` </li> </ul> |
 | `editType` | List | |
 | `viewType` | List | |
 | `usageType` | List | |
@@ -3560,8 +3434,7 @@ OxAuthClient
 | `iname` | String | |
 | `displayName` | String | | 
 | `description` | String  | |
-| `oxAuthAppType` | String | `web` |
-| | | `native` |
+| `oxAuthAppType` | String | <ul> <li> `web` </li> <li> `native` </li> </ul>|
 | `contacts` | List | |
 | `oxAuthRedirectURIs` | List | | 
 | `oxAuthPostLogoutRedirectURIs` | List | |
@@ -3580,90 +3453,22 @@ OxAuthClient
 | `jwksUri` | String | |
 | `jwks` | String | |
 | `sectorIdentifierUri` | String | | 
-| `subjectType` | String | `pairwise` |
-| | | `public` |
+| `subjectType` | String | <ul> <li> `pairwise` </li> <li> `public` </li> </ul> |
 | `idTokenTokenBindingCnf` | String | | 
 | `rptAsJwt` | Boolean | |
 | `accessTokenAsJwt` | Boolean | | 
-| `accessTokenSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `idTokenSignedResponseAlg` | String |`none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `idTokenEncryptedResponseAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `idTokenEncryptedResponseEnc` | String | `A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `userInfoSignedResponseAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `userInfoEncryptedResponseAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `userInfoEncryptedResponseEnc` | String |`A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `requestObjectSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
-| `requestObjectEncryptionAlg` | String | `RSA1_5` |
-| | | `RSA-OAEP` |
-| | | `A128KW` |
-| | | `A256KW` |
-| `requestObjectEncryptionEnc` | String | `A128CBC+HS256` |
-| | | `A256CBC+HS512` |
-| | | `A128GCM` |
-| | | `A256GCM` |
-| `tokenEndpointAuthMethod` | String | `client_secret_basic` |
-| | | `client_secret_post` |
-| | | `client_secret_jwt` |
-| | | `private_key_jwt` |
-| | | `none` |
-| `tokenEndpointAuthSigningAlg` | String | `none` |
-| | | `HS256` |
-| | | `HS384` |
-| | | `HS512` |
-| | | `RS256` |
-| | | `RS384` |
-| | | `RS512` |
-| | | `ES256` |
-| | | `ES384` |
-| | | `ES512` |
+| `accessTokenSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `idTokenSignedResponseAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> | 
+| `idTokenEncryptedResponseAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
+| `idTokenEncryptedResponseEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `userInfoSignedResponseAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `userInfoEncryptedResponseAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
+| `userInfoEncryptedResponseEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `requestObjectSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
+| `requestObjectEncryptionAlg` | String | <ul> <li> `RSA1_5` </li> <li> `RSA-OAEP` </li> <li> `A128KW` </li> <li> `A256KW` </li> </ul> |
+| `requestObjectEncryptionEnc` | String | <ul> <li> `A128CBC+HS256` </li> <li> `A256CBC+HS512` </li> <li> `A128GCM` </li> <li> `A256GCM` </li> </ul> |
+| `tokenEndpointAuthMethod` | String | <ul> <li> `client_secret_basic` </li> <li> `client_secret_post` </li> <li>  `client_secret_jwt` </li> <li> `private_key_jwt` </li> <li> `none` </li> </ul> |
+| `tokenEndpointAuthSigningAlg` | String | <ul> <li> `none` </li> <li> `HS256` </li> <li> `HS384` </li> <li> `HS512` </li> <li> `RS256` </li> <li> `RS384` </li> <li> `RS512` </li> <li> `ES256` </li> <li> `ES384` </li> <li> `ES512` </li> </ul> |
 | `defaultMaxAge` | Integer | | 
 | `requireAuthTime` | Boolean | |  
 | `postLogoutRedirectUris` | List | | 
@@ -3720,22 +3525,8 @@ CustomScript
 | `aliases` | List | | 
 | `description` | String | | 
 | `script` | String | | 
-| `scriptType` | String | `person_authentication`
-| | | `introspection` |
-| | | `resource_owner_password_credentials` |
-| | | `application_session` |
-| | | `cache_refresh` |
-| | | `update_user` |
-| | | `user_registration` |
-| | | `client_registration` |
-| | | `id_generator` |
-| | | `uma_rpt_policy` |
-| | | `uma_claims_gathering` |
-| | | `consent_gathering` |
-| | | `dynamic_scope` |
-| | | `scim` |
-| `programmingLanguage` | String | `python` |
-| | | `javascript` |
+| `scriptType` | String | <ul> <li> `person_authentication` </li> <li> `introspection` </li> <li> `resource_owner_password_credentials` </li> <li> `application_session` </li> <li> `cache_refresh` </li> <li> `update_user` </li> <li> `user_registration` </li> <li> `client_registration` </li> <li> `id_generator` </li> <li> `uma_rpt_policy` </li> <li> `uma_claims_gathering` </li> <li> `consent_gathering` </li> <li> `dynamic_scope` </li> <li> `scim` </li> </ul> |
+| `programmingLanguage` | String | <ul> <li> `python` </li> <li> `javascript` </li> </ul> |
 | `moduleProperties` | List | | 
 | `configurationProperties` | List | | 
 | `level` | Integer | |
@@ -3744,8 +3535,7 @@ CustomScript
 | `scriptError` | ScriptError | | 
 | `modified` | Boolean | | 
 | `internal` | Boolean | | 
-| `locationType` | String | `ldap` |
-| | | `file` |
+| `locationType` | String | <ul> <li> `ldap` </li> <li> `file` </li> </ul> |
 | `locationPath` | String | | 
 | `baseDn` | String | | 
 
@@ -3782,10 +3572,7 @@ GluuGroupApi
 | `owner` | String | | 
 | `members` | List | | 
 | `organization` | String | | 
-| `status` | String | `active` |
-| | | `inactive` |
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 
 **Parameters**
 
@@ -3820,10 +3607,7 @@ GluuGroupApi
 | `userName` | String | | 
 | `displayName` | String | | 
 | `creationDate` | Date | | 
-| `status` | String | `active` |
-| | | `inactive` |
-| | | `expired` |
-| | | `register` |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul>|
 
 **Parameters**
 
@@ -4181,10 +3965,7 @@ Scope
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid` </li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
@@ -4377,10 +4158,7 @@ Scope
 | `id` | String | | 
 | `iconUrl` | String | | 
 | `description` | String | | 
-| `scopeType` | String | `openid` |
-| | | `dynamic` |
-| | | `uma` |
-| | | `oauth` |
+| `scopeType` | String | <ul> <li> `openid` </li> <li> `dynamic` </li> <li> `uma` </li> <li> `oauth` </li> </ul> |
 | `oxAuthClaims` | List | | 
 | `defaultScope` | Boolean | | 
 | `oxAuthGroupClaims` | Boolean | | 
