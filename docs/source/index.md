@@ -70,7 +70,10 @@ oxTrust Api has two modes and administrators can configure them based on their n
    1. Use that accesss token as Bearer token when making api calls.
    
 ### UMA Mode
-
+  
+  The UMA mode is the mode in which the API is protected by UMA. This is the recommended mode for production server.
+  
+  
 
 ## Available Endpoints
 
