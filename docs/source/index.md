@@ -42,7 +42,37 @@ Add the REST API extension to an existing Gluu 4.0.x deployment by following the
 
 1. [Restart](https://gluu.org/docs/ce/4.0/operation/services/#restart) the `identity` service.
 
-## Available APIs
+## Available API modes
+oxTrust Api has two modes and administrators can configure them based on their needs.
+
+### Test Mode
+   Bellow are the steps to configure the test mode:
+   1. Move oxtrust api jar to **/opt/gluu/jetty/identity/custom/libs/**.
+   1. Edit **identity.xml** accordingly as mentioned above
+   1. Restart identity service
+   1. Logged into Gluu Admin Ui
+   1. Navigate to **Configuration** -> **Manage Custom Scripts**
+   1. Under **UMA RPT Policies**, select and enable the custom script named **oxtrust_api_access_policy**
+   1. Save the custom script
+   1. Navigate to **Configuration** -> **Json Configuration**, select **oxTrust Configuration** tab
+   1. Search then field named **oxTrustApiTestMode**,set it to true and save the change.
+   1. Add an OpenId Connect for testing
+       - Client Name: **what ever you want**
+       - Client secret: **a rememorable secret**
+       - scopes: **openid**,**permission**
+       - grand types: **client_credentials**
+       - Response type: **token**
+       NB:After pressing the save button, take note of the client id generated and the secret. We need them for next step.
+   1. Run the command below from a terminal to request an access token from gluu server
+       ```
+       curl -k -u 'testClientId:testClientSecert' -d grant_type=client_credentials https://yourhostname/oxauth/restv1/token
+       ```
+   1. Use that accesss token as Bearer token when making api calls.
+   
+### UMA Mode
+
+
+## Available Endpoints
 
 | API | Description |
 | --- | ----------- |
@@ -60,7 +90,7 @@ Add the REST API extension to an existing Gluu 4.0.x deployment by following the
 | [createPerson](#createperson) | Add a new person |
 | [createScope](#createscope) | Add a new OpenID Connect scope |
 | [createSectorIdentifier](#createsectoridentifier) | Add a new sector identifier |
-| [createUmaResource](#createumaresource) | Add a new UMA resource|
+| [createUmaResource](#createumaresource) | Add a new UMA resource|nd 
 | [createUmaScope](#createumascope) | Add a new UMA scope |
 | [delete](#delete) | Delete an existing configuration |
 | [deleteAllProviders](#deleteallproviders) | Delete all providers |
