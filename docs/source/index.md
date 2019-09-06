@@ -1515,10 +1515,7 @@ GluuAttribute
 | `usageType` | List | |
 | `oxAuthClaimName` | String | | 
 | `seeAlso` | String | | 
-| `status` | String | `active` | |
-| | | `inactive` | |
-| | | `expired` | | 
-| | | `register` | |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 | `saml1Uri` | String | |
 | `saml2Uri` | String | |
 | `urn` | String | |
@@ -1615,8 +1612,7 @@ OxAuthClient
 | `jwksUri` | String | |
 | `jwks` | String | |
 | `sectorIdentifierUri` | String | | 
-| `subjectType` | String | `pairwise` |
-| | | `public` |
+| `subjectType` | String | <ul> <li> `pairwise` </li> <li> `public` </li> </ul> |
 | `idTokenTokenBindingCnf` | String | | 
 | `rptAsJwt` | Boolean | |
 | `accessTokenAsJwt` | Boolean | | 
@@ -2993,10 +2989,7 @@ GluuAttribute
 | `usageType` | List | |
 | `oxAuthClaimName` | String | | 
 | `seeAlso` | String | | 
-| `status` | String | `active` | |
-| | | `inactive` | |
-| | | `expired` | | 
-| | | `register` | |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 | `saml1Uri` | String | |
 | `saml2Uri` | String | |
 | `urn` | String | |
@@ -3165,6 +3158,7 @@ String
 String
 
 **Parameters**
+
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Query | `pattern` | String |
@@ -3219,7 +3213,7 @@ ConnectionStatusDTO
 **Parameters**
 
 | Location | Parameter Name | Input |
-|---    | --- |
+|---   | --- | --- |
 | Body |  | `LdapConnectionData(LdapConnectionData)` |
 
 -----
@@ -3247,7 +3241,7 @@ ConnectionStatusDTO
 **Parameters**
 
 | Location | Parameter Name | Input |
-|---    | --- |
+| ---  | --- | --- |
 | Path | `name` | String |
 
 -----
@@ -3391,10 +3385,7 @@ GluuAttribute
 | `usageType` | List | |
 | `oxAuthClaimName` | String | | 
 | `seeAlso` | String | | 
-| `status` | String | `active` | |
-| | | `inactive` | |
-| | | `expired` | | 
-| | | `register` | |
+| `status` | String | <ul> <li> `active` </li> <li> `inactive` </li> <li> `expired` </li> <li> `register` </li> </ul> |
 | `saml1Uri` | String | |
 | `saml2Uri` | String | |
 | `urn` | String | |
