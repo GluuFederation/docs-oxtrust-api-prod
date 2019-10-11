@@ -5,7 +5,7 @@
 Gluu Server 4.0.x offers REST APIs for the [oxTrust Admin GUI](https://gluu.org/docs/ce/4.0/admin-guide/oxtrust-ui/). With the REST API, server configurations can be automated, new GUIs can be built to expose specific admin functionality, and other integrations can be created for the Gluu admin portal.
 
 !!! Attention
-    The REST APIs are still under development, and are *not* stable. 
+    The REST APIs are stable for Gluu 4.0, but will likely be enhanced and modified in Gluu 4.1. 
 
 ## Installation
 
