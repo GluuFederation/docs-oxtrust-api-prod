@@ -13,8 +13,9 @@ Add the REST API extension to an existing Gluu 4.0.x deployment by following the
 
 1. Inside the Gluu chroot, navigate to `/custom/libs/`.
 
-1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 beta version currently installed:
+1. In this folder, download the .jar file corresponding to the Gluu Server CE 4.0 version currently installed:
 
+    - [Final](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b3/oxtrust-api-server-4.0.Final.jar)
     - [Beta 3](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b3/oxtrust-api-server-4.0.b3.jar)
     - [Beta 2](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b2/oxtrust-api-server-4.0.b2.jar)
     - [Beta 1](https://ox.gluu.org/maven/org/gluu/oxtrust-api-server/4.0.b1/oxtrust-api-server-4.0.b1.jar)
