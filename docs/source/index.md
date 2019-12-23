@@ -4198,3 +4198,7 @@ Scope
 | Location | Parameter Name | Input |
 | --- | --- | --- |
 | Body | | `Scope(Scope)` |
+
+## License
+
+Gluu oxTrust APIs are made available under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
