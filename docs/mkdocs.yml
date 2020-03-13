@@ -39,7 +39,8 @@ markdown_extensions:
 # Navigation
 nav:
 - 'Versions':
-    - '4.0 Beta': 'https://gluu.org/docs/oxtrust-api/4.0/'
+    - '4.0': 'https://gluu.org/docs/oxtrust-api/4.0/'
+    - '4.1': 'https://gluu.org/docs/oxtrust-api/4.1/'
 - ' ': 'https://gluu.org/docs'
 - ' ': 'https://gluu.org/docs'
 - Home: 'index.md'
