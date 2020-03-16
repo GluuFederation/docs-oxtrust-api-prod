@@ -85,7 +85,12 @@ The oxTrust API has two modes that administrators can configure according to nee
     Enable oxTrust Test Mode [N]?[Y/N]                                 y
     ```
     
-    Alternatively, enable the features using oxTrust UI. 
+    Alternatively, enable the features using oxTrust UI.
+    
+    1. Navigate to `Configuration > Manage Custom Scripts`, Under `UMA RPT Policies`, select and enable the custom script named `oxtrust_api_access_policy`
+    
+    1. Navigate to `Configuration > JSON Configuration`, select `oxTrust Configuration` tab
+Search for the field named `oxTrustApiTestMode`, set it to `True` and save the change.
 
 1.  Obtain Test mode client credentials from config and secret backends.
 
@@ -166,6 +171,8 @@ The oxTrust API has two modes that administrators can configure according to nee
     Enable oxTrust Test Mode [N]?[Y/N]                                 N
     ```
     Alternatively, enable the features using oxTrust UI.
+    
+    1. Navigate to `Configuration > Manage Custom Scripts`, Under `UMA RPT Policies`, select and enable the custom script named `oxtrust_api_access_policy`    
 
 1.  Make request to oxTrust API (in this example, we're going to use `https://demoexample.gluu.org` URL), for example:
 
