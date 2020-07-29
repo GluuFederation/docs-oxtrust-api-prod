@@ -396,7 +396,7 @@ Follow these steps to configure the test mode:
     - Client Name: **whatever you want**
     - Client secret: **a memorable secret**
     - scopes: **openid**,**permission**
-    - grand types: **client_credentials**
+    - grant types: **client_credentials**
     - Response type: **token**
     - NB: After pressing the save button, take note of the client ID generated and the secret. We need them for next step.
 
